@@ -1,6 +1,6 @@
 
-w	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(ê‚šÆøÿÿÿÿ8ÿè¼Öû0HTRMAJORZ
+s	java:S107 "AConstructor has 8 parameters, which is greater than 7 authorized.(òù“è8ÿè¼Öû0H„RMAJORZ
 CODE_SMELL
-l
-java:S1172"5Remove this unused method parameter "estadoELeccion".(‘Ö¢£şÿÿÿÿ8ÿè¼Öû0HURMAJORZ
+m
+java:S1172!"5Remove this unused method parameter "estadoELeccion".(àïÒùÿÿÿÿ8ÿè¼Öû0H…RMAJORZ
 CODE_SMELL

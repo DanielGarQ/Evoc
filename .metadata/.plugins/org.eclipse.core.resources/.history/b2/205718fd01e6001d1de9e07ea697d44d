@@ -1,0 +1,31 @@
+package co.edu.uco.evoc.crosscutting.utils;
+
+import java.util.UUID;
+
+public final class UtilTelefono {
+	
+	public static final String DEFAULT_TELEFONO_AS_STRING = "";
+	public static final UUID DEFAULT_TELEFONO = generateTelefonoFromString(DEFAULT_TELEFONO_AS_STRING);
+	private static final String UUID_RE = "[+][0-9]{2}([0-9]{3}){2}[0-9]{4}";
+	
+	private UtilTelefono(){
+		super();
+	}
+	
+	public static final boolean TelefonoStringIsValid(final String telefonoValue) {
+		return (UtilText.getUtilText().matchPattern(telefonoValue, UUID_RE));
+	}
+	
+	public static final UUID generateTelefonoFromString(final String telefonoValue) {
+		return (TelefonoStringIsValid(telefonoValue)) ? UUID.fromString(telefonoValue) : DEFAULT_TELEFONO ;
+	}
+	
+	public static final UUID getDefault(final UUID telefonoValue) {
+		return UtilObject.isNull(telefonoValue) ? DEFAULT_TELEFONO : telefonoValue;
+	}
+	public static void main(String[] args) {
+		UtilTelefono telefono = new UtilTelefono();
+		
+		System.out.println(telefono);
+	}
+}

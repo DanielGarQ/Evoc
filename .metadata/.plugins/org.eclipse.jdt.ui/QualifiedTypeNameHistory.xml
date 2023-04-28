@@ -3,4 +3,26 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.UUID"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilObject"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.TipoCandidatoDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.TipoIdentificacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.TipoRegistradorDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.ZonaDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.PartidoDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.RegistraduriaDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.EstadoRegistradorDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilText"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.EstadoEleccionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.PersonaDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.LocacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.CandidatoDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.VotanteRegistradoDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.MesaVotacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.JuradoRemanenteDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.EleccionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.CartonesPorMesaDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.CartonVotacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.JuradoVotacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilUUID"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilTelefono"/>
 </qualifiedTypeNameHistroy>

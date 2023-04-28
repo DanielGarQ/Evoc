@@ -2,6 +2,9 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public final class TipoRegistradorDTO {
 	
 	private UUID identificador;
@@ -10,9 +13,9 @@ public final class TipoRegistradorDTO {
 	
 	public TipoRegistradorDTO() {
 		super();
-		setIdentificador(identificador);
-		setNombre(nombre);
-		setDescripcion(descripcion);
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setDescripcion(UtilText.EMPTY);
 	}
 	
 	public TipoRegistradorDTO(UUID identificador, String nombre, String descripcion) {
@@ -21,25 +24,31 @@ public final class TipoRegistradorDTO {
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
+	
+	public static TipoRegistradorDTO create() {
+		return new TipoRegistradorDTO();
+	}
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
-	public final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+	public final TipoRegistradorDTO setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 	public final String getNombre() {
 		return nombre;
 	}
-	public final void setNombre(final String nombre) {
-		this.nombre = nombre;
+	public final TipoRegistradorDTO setNombre(final String nombre) {
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
+		return this;
 	}
 	public final String getDescripcion() {
 		return descripcion;
 	}
-	public final void setDescripcion(final String descripcion) {
-		this.descripcion = descripcion;
+	public final TipoRegistradorDTO setDescripcion(final String descripcion) {
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
+		return this;
 	}
-	
-	
 
 }

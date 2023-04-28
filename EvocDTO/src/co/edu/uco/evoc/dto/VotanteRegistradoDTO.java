@@ -16,9 +16,9 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 		setValidacionDactilar(validacionDactilar);
 	}
 	
-	public VotanteRegistradoDTO(UUID identificador, TipoIdentificacionDTO tipoIdentificacion, String identificacion,
-			String nombre, String apellido, MesaVotacionDTO mesaVotacion, Date fechaExpedicionIdentificacion,
-			boolean validacionDactilar) {
+	public VotanteRegistradoDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
+			final String nombre, final String apellido, final MesaVotacionDTO mesaVotacion, final Date fechaExpedicionIdentificacion,
+			final boolean validacionDactilar) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
@@ -27,23 +27,24 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 	public final MesaVotacionDTO getMesaVotacion() {
 		return mesaVotacion;
 	}
-	public final void setMesaVotacion(final MesaVotacionDTO mesaVotacion) {
+	public final VotanteRegistradoDTO setMesaVotacion(final MesaVotacionDTO mesaVotacion) {
 		this.mesaVotacion = mesaVotacion;
+		return this;
 	}
 	public final Date getFechaExpedicionIdentificacion() {
 		return fechaExpedicionIdentificacion;
 	}
-	public final void setFechaExpedicionIdentificacion(final Date fechaExpedicionIdentificacion) {
+	public final VotanteRegistradoDTO setFechaExpedicionIdentificacion(final Date fechaExpedicionIdentificacion) {
 		this.fechaExpedicionIdentificacion = fechaExpedicionIdentificacion;
+		return this;
 	}
 	public final boolean isValidacionDactilar() {
 		return validacionDactilar;
 	}
-	public final void setValidacionDactilar(final boolean validacionDactilar) {
+	public final VotanteRegistradoDTO setValidacionDactilar(final boolean validacionDactilar) {
 		this.validacionDactilar = validacionDactilar;
+		return this;
 	}
-	
-	
-	
+
 
 }

@@ -2,6 +2,9 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public final class PartidoDTO {
 	
 	private UUID identificador;
@@ -10,9 +13,9 @@ public final class PartidoDTO {
 	
 	public PartidoDTO() {
 		super();
-		setIdentificador(identificador);
-		setNombre(nombre);
-		setSede(sede);
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setSede(UtilText.EMPTY);
 	}
 	
 	public PartidoDTO(UUID identificador, String nombre, String sede) {
@@ -21,25 +24,32 @@ public final class PartidoDTO {
 		setNombre(nombre);
 		setSede(sede);
 	}
+	
+	public static PartidoDTO create() {
+		return new PartidoDTO();
+	}
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
-	public final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+	public final PartidoDTO setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 	public final String getNombre() {
 		return nombre;
 	}
-	public final void setNombre(final String nombre) {
-		this.nombre = nombre;
+	public final PartidoDTO setNombre(final String nombre) {
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
+		return this;
 	}
 	public final String getSede() {
 		return sede;
 	}
-	public final void setSede(final String sede) {
-		this.sede = sede;
+	public final PartidoDTO setSede(final String sede) {
+		this.sede = UtilText.getUtilText().applyTrim(sede);
+		return this;
 	}
-	
-	
+
 
 }

@@ -3,6 +3,9 @@ package co.edu.uco.evoc.dto;
 import java.util.Date;
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public final class EleccionDTO {
 	
 	private UUID identificador;
@@ -16,8 +19,8 @@ public final class EleccionDTO {
 	
 	public EleccionDTO() {
 		super();
-		setIdentificador(identificador);
-		setNombre(nombre);
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoEleccion(tipoEleccion);
 		setZona(zona);
 		setFechaInicial(fechaInicial);
@@ -26,8 +29,8 @@ public final class EleccionDTO {
 		setEstadoEleccion(estadoEleccion);
 	}
 	
-	public EleccionDTO(UUID identificador, String nombre, TipoEleccionDTO tipoEleccion, ZonaDTO zona, Date fechaInicial,
-			Date fechaFinal, RegistradorDTO registrador, EstadoEleccionDTO estadoELeccion) {
+	public EleccionDTO(final UUID identificador, final String nombre, final TipoEleccionDTO tipoEleccion, final ZonaDTO zona, final Date fechaInicial,
+			final Date fechaFinal, final RegistradorDTO registrador, final EstadoEleccionDTO estadoELeccion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -38,56 +41,66 @@ public final class EleccionDTO {
 		setRegistrador(registrador);
 		setEstadoEleccion(estadoEleccion);
 	}
+	
+	public static EleccionDTO create() {
+		return new EleccionDTO();
+	}
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
-	public final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+	public final EleccionDTO setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 	public final String getNombre() {
 		return nombre;
 	}
-	public final void setNombre(final String nombre) {
-		this.nombre = nombre;
+	public final EleccionDTO setNombre(final String nombre) {
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
+		return this;
 	}
 	public final TipoEleccionDTO getTipoEleccion() {
 		return tipoEleccion;
 	}
-	public final void setTipoEleccion(final TipoEleccionDTO tipoEleccion) {
+	public final EleccionDTO setTipoEleccion(final TipoEleccionDTO tipoEleccion) {
 		this.tipoEleccion = tipoEleccion;
+		return this;
 	}
 	public final ZonaDTO getZona() {
 		return zona;
 	}
-	public final void setZona(final ZonaDTO zona) {
+	public final EleccionDTO setZona(final ZonaDTO zona) {
 		this.zona = zona;
+		return this;
 	}
 	public final Date getFechaInicial() {
 		return fechaInicial;
 	}
-	public final void setFechaInicial(final Date fechaInicial) {
+	public final EleccionDTO setFechaInicial(final Date fechaInicial) {
 		this.fechaInicial = fechaInicial;
+		return this;
 	}
 	public final Date getFechaFinal() {
 		return fechaFinal;
 	}
-	public final void setFechaFinal(final Date fechaFinal) {
+	public final EleccionDTO setFechaFinal(final Date fechaFinal) {
 		this.fechaFinal = fechaFinal;
+		return this;
 	}
 	public final RegistradorDTO getRegistrador() {
 		return registrador;
 	}
-	public final void setRegistrador(final RegistradorDTO registrador) {
+	public final EleccionDTO setRegistrador(final RegistradorDTO registrador) {
 		this.registrador = registrador;
+		return this;
 	}
 	public final EstadoEleccionDTO getEstadoEleccion() {
 		return estadoEleccion;
 	}
-	public final void setEstadoEleccion(final EstadoEleccionDTO estadoEleccion) {
+	public final EleccionDTO setEstadoEleccion(final EstadoEleccionDTO estadoEleccion) {
 		this.estadoEleccion = estadoEleccion;
+		return this;
 	}
-	
-	
-	
 
 }

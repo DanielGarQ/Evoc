@@ -2,6 +2,9 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public final class MesaVotacionDTO {
 	
 	private UUID identificador;
@@ -12,14 +15,15 @@ public final class MesaVotacionDTO {
 	
 	public MesaVotacionDTO() {
 		super();
-		setNumeroMesa(numeroMesa);
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setNumeroMesa(UtilText.getUtilText().getDefaultValue());
 		setPotencialElectoral(potencialElectoral);
 		setLocacion(locacion);
 		setEstadoMesaVotacionCalculado(estadoMesaVotacionCalculado);
 	}
 	
-	public MesaVotacionDTO(UUID identificador, String numeroMesa, int potencialElectoral, LocacionDTO locacion,
-			EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
+	public MesaVotacionDTO(final UUID identificador, final String numeroMesa, final int potencialElectoral, final LocacionDTO locacion,
+			final EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
 		super();
 		setIdentificador(identificador);
 		setNumeroMesa(numeroMesa);
@@ -27,36 +31,45 @@ public final class MesaVotacionDTO {
 		setLocacion(locacion);
 		setEstadoMesaVotacionCalculado(estadoMesaVotacionCalculado);
 	}
+	
+	public static MesaVotacionDTO create() {
+		return new MesaVotacionDTO();
+	}
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
-	public final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+	public final MesaVotacionDTO setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 	public final String getNumeroMesa() {
 		return numeroMesa;
 	}
-	public final void setNumeroMesa(final String numeroMesa) {
-		this.numeroMesa = numeroMesa;
+	public final MesaVotacionDTO setNumeroMesa(final String numeroMesa) {
+		this.numeroMesa = UtilText.getUtilText().applyTrim(numeroMesa);
+		return this;
 	}
 	public final int getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	public final void setPotencialElectoral(final int potencialElectoral) {
+	public final MesaVotacionDTO setPotencialElectoral(final int potencialElectoral) {
 		this.potencialElectoral = potencialElectoral;
+		return this;
 	}
 	public final LocacionDTO getLocacion() {
 		return locacion;
 	}
-	public final void setLocacion(final LocacionDTO locacion) {
+	public final MesaVotacionDTO setLocacion(final LocacionDTO locacion) {
 		this.locacion = locacion;
+		return this;
 	}
 	public final EstadoMesaVotacionCalculadoDTO getEstadoMesaVotacionCalculado() {
 		return estadoMesaVotacionCalculado;
 	}
-	public final void setEstadoMesaVotacionCalculado(final EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
+	public final MesaVotacionDTO setEstadoMesaVotacionCalculado(final EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
 		this.estadoMesaVotacionCalculado = estadoMesaVotacionCalculado;
+		return this;
 	}
-	
 
 }

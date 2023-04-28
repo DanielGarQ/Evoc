@@ -13,26 +13,33 @@ public final class CandidatoDTO extends PersonaDTO {
 		setPartido(partido);
 	}
 	
-	public CandidatoDTO(UUID identificador, TipoIdentificacionDTO tipoIdentificacion, String identificacion,
-			String nombre, String apellido, TipoCandidatoDTO tipoCandidato, PartidoDTO partido) {
+	public CandidatoDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
+			final String nombre, final String apellido, final TipoCandidatoDTO tipoCandidato, final PartidoDTO partido) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setTipoCandidato(tipoCandidato);
 		setPartido(partido);
 		
 	}
+	
+	public static CandidatoDTO create() {
+		return new CandidatoDTO();
+	}
+	
 	public final TipoCandidatoDTO getTipoCandidato() {
 		return tipoCandidato;
 	}
-	public final void setTipoCandidato(final TipoCandidatoDTO tipoCandidato) {
+	public final CandidatoDTO setTipoCandidato(final TipoCandidatoDTO tipoCandidato) {
 		this.tipoCandidato = tipoCandidato;
+		return this;
 	}
 	public final PartidoDTO getPartido() {
 		return partido;
 	}
-	public final void setPartido(final PartidoDTO partido) {
+	public final CandidatoDTO setPartido(final PartidoDTO partido) {
 		this.partido = partido;
+		return this;
 	}
-	
+
 	
 
 }

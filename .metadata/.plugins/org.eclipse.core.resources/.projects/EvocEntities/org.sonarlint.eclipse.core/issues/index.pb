@@ -39,3 +39,11 @@ i
 0src/co/edu/uco/evoc/entities/EleccionEntity.java,b\3\b3d89def4b9c691225a269f53884c57359e94dd7
 a
 1src/co/edu/uco/evoc/entities/CandidatoEntity.java,3\e\3e9deceed3a8d4d47438602147af02485fe3d636
+g
+7src/co/edu/uco/evoc/entities/JuradoRemanenteEntity.java,5\a\5afab012bae7f5e2452c8c7754e6753171636332
+f
+6src/co/edu/uco/evoc/entities/JuradoVotacionEntity.java,c\0\c085b3771d06ac97afce6b55c882f2f7ebe4d5dc
+f
+6src/co/edu/uco/evoc/entities/CartonVotacionEntity.java,a\6\a66e5e992e7e71197574cce33fbcb17403604dbb
+g
+7src/co/edu/uco/evoc/entities/CartonesPorMesaEntity.java,b\4\b4b6e69e4d6aab0666024b8414a4b3ca1b304d91

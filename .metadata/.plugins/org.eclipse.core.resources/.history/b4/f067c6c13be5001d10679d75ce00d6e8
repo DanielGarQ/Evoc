@@ -1,0 +1,18 @@
+package co.edu.uco.evoc.crosscutting.utils;
+
+import java.util.UUID;
+
+public final class UtilUUID {
+	
+	private UtilUUID(){
+		super();
+	}
+	
+	//public static final String DEFAULT_UUID_AS_STRING = 
+	
+	public static void main(String[] args) {
+		
+		System.out.println(UUID.randomUUID());
+	}
+
+}

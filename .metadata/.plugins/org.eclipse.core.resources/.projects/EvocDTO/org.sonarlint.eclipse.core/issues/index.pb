@@ -1,6 +1,4 @@
 
-Y
-)src/co/edu/uco/evoc/dto/package-info.java,5\d\5d4f15a492cc5a525fd5734869b29f0dce2c2bee
 W
 'src/co/edu/uco/evoc/dto/PartidoDTO.java,5\e\5e3ec700cb98b5b8d723a0bb4c54061a7b5c7e17
 b
