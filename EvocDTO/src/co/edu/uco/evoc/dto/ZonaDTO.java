@@ -20,7 +20,7 @@ public final class ZonaDTO {
 		setPotencialElectoral(potencialElectoral);
 	}
 	
-	public ZonaDTO(UUID identificador, String nombre, String zonaPadre, int potencialElectoral) {
+	public ZonaDTO(final UUID identificador, final String nombre, final  String zonaPadre, final int potencialElectoral) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);

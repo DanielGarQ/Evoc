@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -16,7 +17,7 @@ public class PersonaDTO {
 	public PersonaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setTipoIdentificacion(tipoIdentificacion);
+		setTipoIdentificacion(TipoIdentificacionDTO.create());
 		setIdentificacion(identificacion);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setApellido(UtilText.getUtilText().getDefaultValue());
@@ -42,7 +43,7 @@ public class PersonaDTO {
 		return tipoIdentificacion;
 	}
 	public void setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
-		this.tipoIdentificacion = tipoIdentificacion;
+		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDTO.create());
 	}
 	public String getIdentificacion() {
 		return identificacion;

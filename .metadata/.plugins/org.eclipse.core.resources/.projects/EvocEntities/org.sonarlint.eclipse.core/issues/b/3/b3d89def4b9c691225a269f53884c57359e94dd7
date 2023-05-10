@@ -1,6 +1,6 @@
 
-l
-java:S1172"5Remove this unused method parameter "estadoELeccion".(ë½íïùÿÿÿÿ8Ê¡Ì×û0HhRMAJORZ
+h
+java:S1172#"5Remove this unused method parameter "estadoELeccion".(âÀàË8Ê¡Ì×û0HáRMAJORZ
 CODE_SMELL
-w	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(®¥°ÿøÿÿÿÿ8Ê¡Ì×û0HgRMAJORZ
+s	java:S107""AConstructor has 8 parameters, which is greater than 7 authorized.(Ö°î²8Ê¡Ì×û0HàRMAJORZ
 CODE_SMELL

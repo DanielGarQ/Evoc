@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -18,8 +19,8 @@ public final class MesaVotacionDTO {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNumeroMesa(UtilText.getUtilText().getDefaultValue());
 		setPotencialElectoral(potencialElectoral);
-		setLocacion(locacion);
-		setEstadoMesaVotacionCalculado(estadoMesaVotacionCalculado);
+		setLocacion(LocacionDTO.create());
+		setEstadoMesaVotacionCalculado(EstadoMesaVotacionCalculadoDTO.create());
 	}
 	
 	public MesaVotacionDTO(final UUID identificador, final String numeroMesa, final int potencialElectoral, final LocacionDTO locacion,
@@ -61,14 +62,14 @@ public final class MesaVotacionDTO {
 		return locacion;
 	}
 	public final MesaVotacionDTO setLocacion(final LocacionDTO locacion) {
-		this.locacion = locacion;
+		this.locacion = UtilObject.getDefault(locacion, LocacionDTO.create());
 		return this;
 	}
 	public final EstadoMesaVotacionCalculadoDTO getEstadoMesaVotacionCalculado() {
 		return estadoMesaVotacionCalculado;
 	}
 	public final MesaVotacionDTO setEstadoMesaVotacionCalculado(final EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
-		this.estadoMesaVotacionCalculado = estadoMesaVotacionCalculado;
+		this.estadoMesaVotacionCalculado = UtilObject.getDefault(estadoMesaVotacionCalculado, EstadoMesaVotacionCalculadoDTO.create());
 		return this;
 	}
 

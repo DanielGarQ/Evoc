@@ -1,0 +1,42 @@
+package co.edu.uco.evoc.entities;
+
+import java.util.List;
+import java.util.UUID;
+
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
+public final class CartonVotacionEntity {
+	
+	private UUID identificador;
+	private List<CandidatoEntity> candidatos;
+	private EleccionEntity eleccion;
+
+	
+	public CartonVotacionEntity(final UUID identificador, final List<CandidatoEntity> candidato, final EleccionEntity eleccion) {
+		super();
+		setIdentificador(identificador);
+		setCandidatos(candidatos);
+		setEleccion(eleccion);
+	}
+	public final UUID getIdentificador() {
+		return identificador;
+	}
+	private final void setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+	}
+	public final List<CandidatoEntity> getCandidatos() {
+		return candidatos;
+	}
+	private final void setCandidatos(final List<CandidatoEntity> candidatos) {
+		this.candidatos = candidatos;
+	}
+	public final EleccionEntity getEleccion() {
+		return eleccion;
+	}
+	private final void setEleccion(final EleccionEntity eleccion) {
+		this.eleccion = eleccion;
+	}
+	
+	
+
+}

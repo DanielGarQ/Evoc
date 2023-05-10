@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -19,7 +20,7 @@ public final class LocacionDTO {
 		setDireccion(direccion);
 		setDescripcion(UtilText.EMPTY);
 		setPotencialElectoral(potencialElectoral);
-		setZona(zona);
+		setZona(ZonaDTO.create());
 	}
 	
 	public LocacionDTO(final UUID identificador, final String direccion, final String descripcion, final int potencialElectoral, final ZonaDTO zona) {
@@ -67,7 +68,7 @@ public final class LocacionDTO {
 		return zona;
 	}
 	public final LocacionDTO setZona(final ZonaDTO zona) {
-		this.zona = zona;
+		this.zona = UtilObject.getDefault(zona, ZonaDTO.create());
 		return this;
 	}
 

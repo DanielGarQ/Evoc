@@ -2,6 +2,10 @@ package co.edu.uco.evoc.entities;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public class PersonaEntity {
 	
 	protected UUID identificador;
@@ -9,6 +13,15 @@ public class PersonaEntity {
 	protected String identificacion;
 	protected String nombre;
 	protected String apellido;
+	
+	protected PersonaEntity() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
+		setIdentificacion(identificacion);
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setApellido(UtilText.getUtilText().getDefaultValue());
+	}
 
 	public PersonaEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion, String identificacion,
 			String nombre, String apellido) {
@@ -29,7 +42,7 @@ public class PersonaEntity {
 		return tipoIdentificacion;
 	}
 	protected void setTipoIdentificacion(TipoIdentificacionEntity tipoIdentificacion) {
-		this.tipoIdentificacion = tipoIdentificacion;
+		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionEntity.getDefaultObject());
 	}
 	public String getIdentificacion() {
 		return identificacion;
