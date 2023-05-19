@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>co.edu.uco.evoc</groupId>
-  <artifactId>EvocDTO</artifactId>
+  <artifactId>EvocBusiness</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>EvocDTO</name>
-  <description>Componente que contiene todos los objetos de transferencia de datos para llevar la informacion desde la capa de Api/Servicios/Comandos/Controladores hasta la capa de Negocio.</description>
+  <name>EvocBusiness</name>
+  <description>Componente que contiene toda la logica de negocio de la aplicación.</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -21,6 +21,21 @@
 	  <dependency>
 		  <groupId>co.edu.uco.evoc</groupId>
   		  <artifactId>EvocCrossCutting</artifactId>
+  		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>co.edu.uco.evoc</groupId>
+  		  <artifactId>EvocEntities</artifactId>
+  		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>co.edu.uco.evoc</groupId>
+  		  <artifactId>EvocDTO</artifactId>
+  		  <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>co.edu.uco.evoc</groupId>
+  		  <artifactId>EvocData</artifactId>
   		  <version>0.0.1-SNAPSHOT</version>
 	  </dependency>
   </dependencies>
