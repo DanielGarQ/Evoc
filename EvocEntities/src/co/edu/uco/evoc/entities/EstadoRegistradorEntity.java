@@ -1,7 +1,6 @@
 package co.edu.uco.evoc.entities;
 
 import java.util.UUID;
-
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 

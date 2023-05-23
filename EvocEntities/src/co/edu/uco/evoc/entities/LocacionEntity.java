@@ -6,7 +6,6 @@ import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
-
 public class LocacionEntity {
 	
 	private static final LocacionEntity DEFAULT_OBJECT = new LocacionEntity();
@@ -18,7 +17,7 @@ public class LocacionEntity {
 	
 	private LocacionEntity() {
 		super();
-		setIdentificador(UtilUUID.DEFAULT_UUID);;
+		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setDireccion(direccion);
 		setDescripcion(UtilText.EMPTY);
 		setPotencialElectoral(potencialElectoral);

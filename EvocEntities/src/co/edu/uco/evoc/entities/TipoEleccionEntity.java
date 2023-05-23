@@ -35,13 +35,13 @@ public class TipoEleccionEntity {
 		return identificador;
 	}
 	private final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+		this.identificador = UtilUUID.getDefault(identificador);
 	}
 	public final String getNombre() {
 		return nombre;
 	}
 	private final void setNombre(final String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 	}
 	public final NivelTipoEleccionEntity getNivelTipoEleccion() {
 		return nivelTipoEleccion;

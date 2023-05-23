@@ -2,6 +2,9 @@ package co.edu.uco.evoc.business.domain;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public final class CartonesPorMesaDomain {
 	
 	private UUID identificador;
@@ -10,8 +13,8 @@ public final class CartonesPorMesaDomain {
 	private VotanteRegistradoDomain votante;
 	private boolean marcacion;
 	
-	public CartonesPorMesaDomain(UUID identidicador, MesaVotacionDomain mesaVotacion, CartonVotacionDomain cartonVotacion,
-			VotanteRegistradoDomain votante, boolean marcacion) {
+	public CartonesPorMesaDomain(final UUID identificador, final MesaVotacionDomain mesaVotacion, final CartonVotacionDomain cartonVotacion,
+			final VotanteRegistradoDomain votante, final boolean marcacion) {
 		super();
 		setIdentificador(identificador);
 		setMesaVotacion(mesaVotacion);
@@ -23,25 +26,25 @@ public final class CartonesPorMesaDomain {
 		return identificador;
 	}
 	public final void setIdentificador(final UUID identificador) {
-		this.identificador = identificador;
+		this.identificador = UtilUUID.getDefault(identificador);
 	}
 	public final MesaVotacionDomain getMesaVotacion() {
 		return mesaVotacion;
 	}
 	public final void setMesaVotacion(final MesaVotacionDomain mesaVotacion) {
-		this.mesaVotacion = mesaVotacion;
+		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDomain.getDefaultObject());
 	}
 	public final CartonVotacionDomain getCartonVotacion() {
 		return cartonVotacion;
 	}
 	public final void setCartonVotacion(final CartonVotacionDomain cartonVotacion) {
-		this.cartonVotacion = cartonVotacion;
+		this.cartonVotacion = UtilObject.getDefault(cartonVotacion, CartonVotacionDomain.getDefaultObject());
 	}
 	public final VotanteRegistradoDomain getVotante() {
 		return votante;
 	}
 	public final void setVotante(final VotanteRegistradoDomain votante) {
-		this.votante = votante;
+		this.votante = UtilObject.getDefault(votante, VotanteRegistradoDomain.getDefaultObject());
 	}
 	public final boolean isMarcacion() {
 		return marcacion;

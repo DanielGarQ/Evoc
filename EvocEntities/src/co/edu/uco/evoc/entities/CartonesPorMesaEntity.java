@@ -13,8 +13,7 @@ public final class CartonesPorMesaEntity {
 	private VotanteRegistradoEntity votante;
 	private boolean marcacion;
 	
-	
-	public CartonesPorMesaEntity(final UUID identidicador, final MesaVotacionEntity mesaVotacion, final CartonVotacionEntity cartonVotacion,
+	public CartonesPorMesaEntity(final UUID identificador, final MesaVotacionEntity mesaVotacion, final CartonVotacionEntity cartonVotacion,
 			final VotanteRegistradoEntity votante, final boolean marcacion) {
 		super();
 		setIdentificador(identificador);

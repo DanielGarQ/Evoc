@@ -19,7 +19,7 @@ public final class CartonVotacionEntity {
 		setEleccion(EleccionEntity.getDefaultObject());
 	}
 	
-	public CartonVotacionEntity(final UUID identificador, final CandidatoEntity candidato, final EleccionEntity eleccion) {
+	public CartonVotacionEntity(final UUID identificador, final CandidatoEntity candidatos, final EleccionEntity eleccion) {
 		super();
 		setIdentificador(identificador);
 		setCandidatos(candidatos);

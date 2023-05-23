@@ -36,7 +36,7 @@ public class PersonaEntity {
 		return identificador;
 	}
 	protected void setIdentificador(UUID identificador) {
-		this.identificador = identificador;
+		this.identificador = UtilUUID.getDefault(identificador);
 	}
 	public TipoIdentificacionEntity getTipoIdentificacion() {
 		return tipoIdentificacion;
@@ -54,13 +54,13 @@ public class PersonaEntity {
 		return nombre;
 	}
 	protected void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 	}
 	public String getApellido() {
 		return apellido;
 	}
 	protected void setApellido(String apellido) {
-		this.apellido = apellido;
+		this.apellido = UtilText.getUtilText().applyTrim(apellido);
 	}
 
 }
