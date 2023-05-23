@@ -1271,3 +1271,64 @@
 2023-05-10 22:06:46,053 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2023-05-18 17:24:30,503 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2023-05-19 16:10:50,888 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-19 16:25:01,743 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-19 17:15:52,390 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-19 17:16:20,572 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:16:20,576 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-19 17:16:20,580 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:16:20,582 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-19 17:19:44,604 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-19 17:19:45,840 [Worker-7: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-19 17:19:46,075 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:46,077 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocDTO\src\main\resources
+2023-05-19 17:19:46,085 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:46,087 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocDTO\src\test\resources
+2023-05-19 17:19:46,883 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-19 17:19:46,897 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:46,899 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocEntities\src\main\resources
+2023-05-19 17:19:46,903 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:46,905 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocEntities\src\test\resources
+2023-05-19 17:19:47,060 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-19 17:19:47,060 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocEntities: co.edu.uco.evoc:EvocEntities:0.0.1-SNAPSHOT with classifier  to /EvocEntities/target/classes
+2023-05-19 17:19:47,076 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:47,078 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocData\src\main\resources
+2023-05-19 17:19:47,081 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:47,083 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocData\src\test\resources
+2023-05-19 17:19:47,368 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-19 17:19:47,368 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocEntities: co.edu.uco.evoc:EvocEntities:0.0.1-SNAPSHOT with classifier  to /EvocEntities/target/classes
+2023-05-19 17:19:47,370 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocDTO: co.edu.uco.evoc:EvocDTO:0.0.1-SNAPSHOT with classifier  to /EvocDTO/target/classes
+2023-05-19 17:19:47,370 [Worker-17: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocData: co.edu.uco.evoc:EvocData:0.0.1-SNAPSHOT with classifier  to /EvocData/target/classes
+2023-05-19 17:19:47,382 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:47,383 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\main\resources
+2023-05-19 17:19:47,387 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-19 17:19:47,391 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\test\resources
+2023-05-22 14:34:10,515 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-23 08:19:17,074 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-23 09:26:25,174 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,181 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 09:26:25,184 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,185 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 09:26:25,717 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-23 09:26:25,725 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,727 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocDTO\src\main\resources
+2023-05-23 09:26:25,730 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,731 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocDTO\src\test\resources
+2023-05-23 09:26:25,919 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-23 09:26:25,926 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,927 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocEntities\src\main\resources
+2023-05-23 09:26:25,929 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,930 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocEntities\src\test\resources
+2023-05-23 09:26:25,988 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-23 09:26:25,988 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocEntities: co.edu.uco.evoc:EvocEntities:0.0.1-SNAPSHOT with classifier  to /EvocEntities/target/classes
+2023-05-23 09:26:25,994 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,995 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocData\src\main\resources
+2023-05-23 09:26:25,997 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:25,998 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocData\src\test\resources
+2023-05-23 09:26:26,109 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocCrossCutting: co.edu.uco.evoc:EvocCrossCutting:0.0.1-SNAPSHOT with classifier  to /EvocCrossCutting/target/classes
+2023-05-23 09:26:26,109 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocEntities: co.edu.uco.evoc:EvocEntities:0.0.1-SNAPSHOT with classifier  to /EvocEntities/target/classes
+2023-05-23 09:26:26,109 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocDTO: co.edu.uco.evoc:EvocDTO:0.0.1-SNAPSHOT with classifier  to /EvocDTO/target/classes
+2023-05-23 09:26:26,109 [Worker-51: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EvocData: co.edu.uco.evoc:EvocData:0.0.1-SNAPSHOT with classifier  to /EvocData/target/classes
+2023-05-23 09:26:26,114 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:26,115 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\main\resources
+2023-05-23 09:26:26,116 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 09:26:26,118 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\test\resources

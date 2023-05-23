@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.dto;
 
-import java.util.List;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
