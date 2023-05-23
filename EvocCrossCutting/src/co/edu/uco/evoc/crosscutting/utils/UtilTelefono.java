@@ -1,7 +1,5 @@
 package co.edu.uco.evoc.crosscutting.utils;
 
-import java.util.UUID;
-
 public final class UtilTelefono {
 	
 	private static final UtilTelefono INSTANCE = new UtilTelefono();

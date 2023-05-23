@@ -1,0 +1,6 @@
+package co.edu.uco.evoc.crosscutting.exception;
+
+public abstract class EvocException extends RuntimeException{
+
+
+}

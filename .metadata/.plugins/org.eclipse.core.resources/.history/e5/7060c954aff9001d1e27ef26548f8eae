@@ -1,0 +1,5 @@
+package co.edu.uco.evoc.crosscutting.utils;
+
+public final class Messages {
+
+}

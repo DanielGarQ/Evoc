@@ -1518,3 +1518,128 @@
 2023-05-23 15:41:59,333 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\main\resources
 2023-05-23 15:41:59,335 [Worker-85: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-05-23 15:41:59,336 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocBusiness\src\test\resources
+2023-05-23 15:47:38,330 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-23 15:53:04,482 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 15:53:04,487 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 15:53:04,490 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 15:53:04,491 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 15:56:28,255 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 15:56:28,256 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 15:56:28,259 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 15:56:28,260 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:00:52,273 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:00:52,274 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:00:52,276 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:00:52,277 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:01:19,651 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:01:19,652 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:01:19,654 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:01:19,655 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:01:57,524 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:01:57,525 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:01:57,527 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:01:57,528 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:03:40,544 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:03:40,546 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:03:40,548 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:03:40,550 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:04:11,968 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:04:11,969 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:04:11,971 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:04:11,972 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:04:37,483 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:04:37,485 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:04:37,490 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:04:37,492 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:18:15,666 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:18:15,668 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:18:15,671 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:18:15,672 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:19:10,935 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:19:10,936 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:19:10,939 [Worker-47: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:19:10,941 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:26:01,124 [Worker-53: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:26:01,125 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:26:01,127 [Worker-53: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:26:01,128 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:29:09,704 [Worker-56: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:29:09,706 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:29:09,708 [Worker-56: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:29:09,709 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:30:19,894 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:30:19,896 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:30:19,899 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:30:19,900 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:32:35,242 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:32:35,244 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:32:35,245 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:32:35,247 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:33:23,380 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:33:23,381 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:33:23,383 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:33:23,384 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:41:42,163 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:41:42,164 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:41:42,166 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:41:42,167 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:44:41,297 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:44:41,298 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:44:41,299 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:44:41,300 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:45:17,372 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:45:17,373 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:45:17,374 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:45:17,375 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:45:50,444 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:45:50,445 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:45:50,447 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:45:50,448 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:48:16,850 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:48:16,852 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:48:16,854 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:48:16,855 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:48:50,372 [Worker-71: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:48:50,373 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:48:50,376 [Worker-71: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:48:50,376 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:49:03,658 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:03,659 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:49:03,661 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:03,662 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:49:11,235 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:11,236 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:49:11,237 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:11,238 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:49:27,356 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:27,357 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:49:27,359 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:49:27,360 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:50:20,251 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:20,253 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:50:20,254 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:20,256 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:50:32,081 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:32,082 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:50:32,083 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:32,084 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:50:43,377 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:43,378 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:50:43,379 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:50:43,380 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:51:34,687 [Worker-71: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:51:34,688 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:51:34,690 [Worker-71: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:51:34,691 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:52:12,460 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:52:12,461 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:52:12,464 [main] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:52:12,465 [main] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:52:20,460 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:52:20,461 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:52:20,462 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:52:20,463 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources
+2023-05-23 16:58:13,856 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:58:13,857 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\main\resources
+2023-05-23 16:58:13,860 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-05-23 16:58:13,862 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Daniel\Documents\EVOC Backend\EvocCrossCutting\src\test\resources

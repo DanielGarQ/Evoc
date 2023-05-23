@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.TipoIdentificacionEntity"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.TipoIdentificacionDTO"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.TipoRegistradorEntity"/>
-    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilText"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.EstadoMesaVotacionCalculadoDTO"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.dto.LocacionDTO"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.LocacionEntity"/>
@@ -48,6 +47,9 @@
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.CartonesPorMesaEntity"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.MesaVotacionEntity"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.CartonVotacionEntity"/>
-    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilObject"/>
     <fullyQualifiedTypeName name="co.edu.uco.evoc.entities.VotanteRegistradoEntity"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilText"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.utils.UtilObject"/>
+    <fullyQualifiedTypeName name="co.edu.uco.evoc.crosscutting.exception.EvocException"/>
 </qualifiedTypeNameHistroy>
