@@ -47,3 +47,5 @@ n
 >src/co/edu/uco/evoc/business/domain/JuradoRemanenteDomain.java,a\8\a8bec81b2ea7efe5409a7baa1372782a572c61dd
 m
 =src/co/edu/uco/evoc/business/domain/CartonVotacionDomain.java,c\0\c04d2592bc678a0e646a6a86435c2e2d450eb54f
+e
+5src/co/edu/uco/evoc/business/assembler/Assembler.java,a\3\a364b058b150f3371019d645d1096cf5ee2ec3d2

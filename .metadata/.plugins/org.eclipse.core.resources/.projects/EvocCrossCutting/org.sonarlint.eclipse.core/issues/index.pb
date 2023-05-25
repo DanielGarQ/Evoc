@@ -7,8 +7,6 @@ d
 4src/co/edu/uco/evoc/crosscutting/utils/UtilText.java,e\7\e72511c157bcdcb80c312d6eba65c0c49e6dbe0d
 d
 4src/co/edu/uco/evoc/crosscutting/utils/UtilUUID.java,0\b\0bc27a7b8ff5493c5c7af11f4f7fab00509d9fd4
-h
-8src/co/edu/uco/evoc/crosscutting/utils/UtilTelefono.java,3\5\35eb7db62c7b917d5320ca33864b100c7926c5b4
 d
 4src/co/edu/uco/evoc/crosscutting/utils/Messages.java,c\9\c94c1a438889ac18f5c2b20cf8523f0e97e9270a
 m
@@ -27,3 +25,5 @@ p
 @src/co/edu/uco/evoc/crosscutting/exception/EvocDtoException.java,f\f\ff13fd81dfb779e2c865d5378562d80d47818866
 s
 Csrc/co/edu/uco/evoc/crosscutting/exception/EvocEntityException.java,4\7\472cc82f5a5887ec949c896c85bfc746f451afb7
+c
+3src/co/edu/uco/evoc/crosscutting/utils/UtilSql.java,d\8\d835a0c36786d46490c26b8cc9e87bae91f034a7

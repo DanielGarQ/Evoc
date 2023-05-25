@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -9,18 +10,18 @@ public final class ZonaDTO {
 	
 	private UUID identificador;
 	private String nombre;
-	private String zonaPadre;
+	private ZonaDTO zonaPadre;
 	private int potencialElectoral;
 	
 	public ZonaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
-		setZonaPadre(zonaPadre);
+		setZonaPadre(ZonaDTO.create());
 		setPotencialElectoral(potencialElectoral);
 	}
 	
-	public ZonaDTO(final UUID identificador, final String nombre, final  String zonaPadre, final int potencialElectoral) {
+	public ZonaDTO(final UUID identificador, final String nombre, final  ZonaDTO zonaPadre, final int potencialElectoral) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -46,17 +47,19 @@ public final class ZonaDTO {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
-	public final String getZonaPadre() {
+	public final ZonaDTO getZonaPadre() {
 		return zonaPadre;
 	}
-	public final void setZonaPadre(final String zonaPadre) {
-		this.zonaPadre = zonaPadre;
+	public final ZonaDTO setZonaPadre(final ZonaDTO zonaPadre) {
+		this.zonaPadre = UtilObject.getDefault(zonaPadre, ZonaDTO.create());
+		return this;
 	}
 	public final int getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	public final void setPotencialElectoral(final int potencialElectoral) {
+	public final ZonaDTO setPotencialElectoral(final int potencialElectoral) {
 		this.potencialElectoral = potencialElectoral;
+		return this;
 	}
 
 

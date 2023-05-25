@@ -47,3 +47,13 @@ c
 3src/co/edu/uco/evoc/data/dao/CartonVotacionDAO.java,0\5\05d54712eb1882c7bd80ccf635c6814c8592b05c
 d
 4src/co/edu/uco/evoc/data/dao/CartonesPorMesaDAO.java,f\b\fbc5ebc9a364f64414b2e2317a348a593b47e55d
+a
+1src/co/edu/uco/evoc/data/dao/factory/Factory.java,5\d\5d40ba8ac4aad2d848bc54760858a46e615ee610
+d
+4src/co/edu/uco/evoc/data/dao/factory/DAOFactory.java,d\2\d2b9ad5ac1e86b98aa6f03f56f4ff071ff77fb61
+„
+Tsrc/co/edu/uco/evoc/data/dao/factory/relational/postgresql/PostgreSqlDAOFactory.java,6\c\6c6d6539cd8a374ad6aa77a6b6f6611727b340a6
+c
+3src/co/edu/uco/evoc/data/dao/relational/SqlDAO.java,4\b\4b4e62afa70d2967557772f32cee58a48de3ee74
+y
+Isrc/co/edu/uco/evoc/data/dao/relational/postgresql/ZonaPostgreSqlDAO.java,4\6\461f46a248bc0826d6e3ff286c742bb9ec697823
