@@ -32,6 +32,11 @@ public class PersonaDTO {
 		setNombre(nombre);
 		setApellido(apellido);
 	}
+	
+	public static PersonaDTO create() {
+		return new PersonaDTO();
+	}
+	
 	public UUID getIdentificador() {
 		return identificador;
 	}
@@ -42,14 +47,16 @@ public class PersonaDTO {
 	public TipoIdentificacionDTO getTipoIdentificacion() {
 		return tipoIdentificacion;
 	}
-	public void setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
+	public PersonaDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
 		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDTO.create());
+		return this;
 	}
 	public String getIdentificacion() {
 		return identificacion;
 	}
-	public void setIdentificacion(String identificacion) {
+	public PersonaDTO setIdentificacion(String identificacion) {
 		this.identificacion = identificacion;
+		return this;
 	}
 	public String getNombre() {
 		return nombre;

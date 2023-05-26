@@ -11,17 +11,17 @@ public final class ZonaDTO {
 	private UUID identificador;
 	private String nombre;
 	private ZonaDTO zonaPadre;
-	private int potencialElectoral;
+	private String potencialElectoral;
 	
 	public ZonaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setZonaPadre(ZonaDTO.create());
-		setPotencialElectoral(potencialElectoral);
+		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 	}
 	
-	public ZonaDTO(final UUID identificador, final String nombre, final  ZonaDTO zonaPadre, final int potencialElectoral) {
+	public ZonaDTO(final UUID identificador, final String nombre, final  ZonaDTO zonaPadre, final String potencialElectoral) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -54,10 +54,10 @@ public final class ZonaDTO {
 		this.zonaPadre = UtilObject.getDefault(zonaPadre, ZonaDTO.create());
 		return this;
 	}
-	public final int getPotencialElectoral() {
+	public final String getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	public final ZonaDTO setPotencialElectoral(final int potencialElectoral) {
+	public final ZonaDTO setPotencialElectoral(final String potencialElectoral) {
 		this.potencialElectoral = potencialElectoral;
 		return this;
 	}
