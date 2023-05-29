@@ -131,9 +131,6 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
 			preparedStatement.setObject(1, entity.getIdentificador());
-			preparedStatement.setObject(2, entity.getNombre());
-			preparedStatement.setObject(3, entity.getZonaPadre());
-			preparedStatement.setObject(4, entity.getPotencialElectoral());
 			
 			preparedStatement.executeUpdate();
 			
@@ -183,12 +180,6 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			
 			if (!UtilText.getUtilText().isEmpty(entity.getNombre())) {
 				parameters.add(entity.getNombre());
-				where.append(setWhere ? "WHERE " : "AND").append("nombre=? ");
-				setWhere = false;
-			}
-			
-			if (!UtilText.getUtilText().isEmpty(entity.getPotencialElectoral())) {
-				parameters.add(entity.getPotencialElectoral());
 				where.append(setWhere ? "WHERE " : "AND").append("nombre=? ");
 				setWhere = false;
 			}

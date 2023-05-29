@@ -38,8 +38,8 @@ public class ZonaEntity {
 		return new ZonaEntity(UtilUUID.DEFAULT_UUID, nombre,ZonaEntity.getDefaultobject(),UtilText.getUtilText().getDefaultValue());
 	}
 	
-	public static final  ZonaEntity createWithZonaPadre(final ZonaEntity zonaPadre) {
-		return new ZonaEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), zonaPadre, UtilText.getUtilText().getDefaultValue());
+	public static final  ZonaEntity createWithZonaPadre(final ZonaEntity ZonaPadre) {
+		return new ZonaEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), ZonaPadre, UtilText.getUtilText().getDefaultValue());
 	}
 	
 	public static final ZonaEntity createWithPotencialElectoral(final String potencialElectoral) {
