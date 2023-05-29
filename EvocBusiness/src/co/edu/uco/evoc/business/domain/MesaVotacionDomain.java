@@ -11,7 +11,7 @@ public class MesaVotacionDomain {
 	private static final MesaVotacionDomain DEFAULT_OBJECT = new MesaVotacionDomain();
 	private UUID identificador;
 	private String numeroMesa;
-	private int potencialElectoral;
+	private String potencialElectoral;
 	private LocacionDomain locacion;
 	private EstadoMesaVotacionCalculadoDomain estadoMesaVotacionCalculado;
 	
@@ -19,12 +19,12 @@ public class MesaVotacionDomain {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNumeroMesa(UtilText.getUtilText().getDefaultValue());
-		setPotencialElectoral(potencialElectoral);
+		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 		setLocacion(LocacionDomain.getDefaultObject());
 		setEstadoMesaVotacionCalculado(EstadoMesaVotacionCalculadoDomain.getDefaultObject());
 	}
 	
-	public MesaVotacionDomain(final UUID identificador, final String numeroMesa, final int potencialElectoral, final LocacionDomain locacion,
+	public MesaVotacionDomain(final UUID identificador, final String numeroMesa, final String potencialElectoral, final LocacionDomain locacion,
 			final EstadoMesaVotacionCalculadoDomain estadoMesaVotacionCalculado) {
 		super();
 		setIdentificador(identificador);
@@ -50,11 +50,11 @@ public class MesaVotacionDomain {
 	private final void setNumeroMesa(final String numeroMesa) {
 		this.numeroMesa = UtilText.getUtilText().applyTrim(numeroMesa);
 	}
-	public final int getPotencialElectoral() {
+	public final String getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	private final void setPotencialElectoral(final int potencialElectoral) {
-		this.potencialElectoral = potencialElectoral;
+	private final void setPotencialElectoral(final String potencialElectoral) {
+		this.potencialElectoral = UtilText.getUtilText().getDefaultValue();
 	}
 	public final LocacionDomain getLocacion() {
 		return locacion;

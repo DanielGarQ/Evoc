@@ -12,7 +12,7 @@ public class LocacionDomain {
 	private UUID identificador;
 	private String direccion;
 	private String descripcion;
-	private int potencialElectoral;
+	private String potencialElectoral;
 	private ZonaDomain zona;
 	
 	private LocacionDomain() {
@@ -20,11 +20,11 @@ public class LocacionDomain {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setDireccion(direccion);
 		setDescripcion(UtilText.EMPTY);
-		setPotencialElectoral(potencialElectoral);
+		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 		setZona(ZonaDomain.getDefaultobject());
 	}
 
-	public LocacionDomain(final UUID identificador, final String direccion, final String descripcion, final int potencialElectoral, final ZonaDomain zona) {
+	public LocacionDomain(final UUID identificador, final String direccion, final String descripcion, final String potencialElectoral, final ZonaDomain zona) {
 		super();
 		setIdentificador(identificador);
 		setDireccion(direccion);
@@ -55,11 +55,11 @@ public class LocacionDomain {
 	private final void setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 	}
-	public final int getPotencialElectoral() {
+	public final String getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	private final void setPotencialElectoral(final int potencialElectoral) {
-		this.potencialElectoral = potencialElectoral;
+	private final void setPotencialElectoral(final String potencialElectoral) {
+		this.potencialElectoral = UtilText.getUtilText().getDefaultValue();
 	}
 	public final ZonaDomain getZona() {
 		return zona;

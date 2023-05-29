@@ -1,6 +1,8 @@
 package co.edu.uco.evoc.data.dao.relational.postgresql;
 
 import java.sql.Connection;
+
+import java.util.UUID;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -24,27 +26,28 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 	@Override
 	public final void create(final ZonaEntity entity) {
 		
-		var sqlStatement = "INSERT INTO EstadoTipoRelacionInstitucion(codigo, nombre, descripcion) VALUES (?, ?, ?)";
+		var sqlStatement = "INSERT INTO Zona(codigo, nombre, descripcion) VALUES (?, ?, ?)";
 				
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
 			preparedStatement.setObject(1, entity.getIdentificador());
 			preparedStatement.setObject(2, entity.getNombre());
-			preparedStatement.setObject(3, entity.getDescripcion());
+			preparedStatement.setObject(3, entity.getZonaPadre());
+			preparedStatement.setObject(4, entity.getPotencialElectoral());
 			
 			preparedStatement.executeUpdate();
 			
 		}catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando de registrar la información del nuevo Estado tipo relacion institucion";
-			var technicalMessage = "se ha presentado un problema de  tipo SQLException  dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando de registrar la información de la nueva zona";
+			var technicalMessage = "se ha presentado un problema de  tipo SQLException  dentro del metodo create de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
 		}catch (final Exception exception) {
 			
-			var userMessage = "Se ha presentado un problema inesperado tratando de registrar la información del nuevo Estado tipo relacion institucion";
-			var technicalMessage = "se ha presentado un problema inesperado dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema inesperado tratando de registrar la información de la nueva zona";
+			var technicalMessage = "se ha presentado un problema inesperado dentro del metodo create de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
@@ -74,15 +77,15 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 		
 		} catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando consultar la información del nuevo Estado tipo relacion institucion deseado...";
-			var technicalMessage = "Un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando consultar la información de la zona deseada...";
+			var technicalMessage = "Un problema de tipo SQLException dentro del metodo read de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
 		} catch (final Exception exception) {
 			
-			var userMessage = "Se ha presentado un problema inesperado tratando de modificar la información del nuevo Estado tipo relación institución deseado...";
-			var technicalMessage = "Un problema inesperado dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema inesperado tratando de modificar la información de la zona deseada...";
+			var technicalMessage = "Un problema inesperado dentro del metodo read de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
@@ -92,7 +95,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 	@Override
 	public final void update(final ZonaEntity entity) {
 		
-		var sqlStatement = "UPDATE EstadoTipoRelacionInstitucion SET nombre= ?, Descripcion= ? WHERE identificador=?";
+		var sqlStatement = "UPDATE Zona SET nombre= ?, Descripcion= ? WHERE identificador=?";
 		
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
@@ -105,15 +108,15 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			
 		}catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando de modificar la información del nuevo Estado tipo relacion institucion deseado...";
-			var technicalMessage = "Un problema de tipo SQLException dentro del metodo update de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando de modificar la información de la zona deseada...";
+			var technicalMessage = "Un problema de tipo SQLException dentro del metodo update de la clase zonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
 		}catch (final Exception exception) {
 			
-			var userMessage = "Se ha presentado un problema inesperado tratando de modificar la información del nuevo Estado tipo relación institución deseado...";
-			var technicalMessage = "Un problema inesperado dentro del metodo update de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema inesperado tratando de modificar la información de de la zona deseada...";
+			var technicalMessage = "Un problema inesperado dentro del metodo update de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
@@ -123,7 +126,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 
 	@Override
 	public final void delete(final ZonaEntity entity) {
-		var sqlStatement = "DELETE FROM EstadoTipoRelacionInstitucion WHERE identificador=?";
+		var sqlStatement = "DELETE FROM Zona WHERE identificador=?";
 		
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
@@ -133,15 +136,15 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			
 		}catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando de dar de baja la información del nuevo Estado tipo relación institucion";
-			var technicalMessage = "Un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando de dar de baja la información de la zona";
+			var technicalMessage = "Un problema de tipo SQLException dentro del metodo create de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
 		}catch (final Exception exception) {
 			
-			var userMessage = "Se ha presentado un problema inesperado tratando dar de baja la información del nuevo Estado";
-			var technicalMessage = "Un problema inesperado dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema inesperado tratando dar de baja la información de la zona";
+			var technicalMessage = "Un problema inesperado dentro del metodo create de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
@@ -156,7 +159,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 
 	@Override
 	protected final String prepareFrom() {
-		return "FROM EstadoTipoRelacionInstitucion";
+		return "FROM Zona";
 	}
 
 	@Override
@@ -181,9 +184,9 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 				setWhere = false;
 			}
 			
-			if (!UtilText.getUtilText().isEmpty(entity.getDescripcion())) {
-				parameters.add(entity.getDescripcion());
-				where.append(setWhere ? "WHERE " : "AND").append("descripçion LIKE %?% ");
+			if (!UtilObject.isNull(entity.getZonaPadre())) {
+				parameters.add(entity.getZonaPadre());
+				where.append(setWhere ? "WHERE " : "AND").append("zonaPadre LIKE %?% ");
 			}
 		}
 		return where.toString();
@@ -204,15 +207,15 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			}
 		}catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando consultar la información de los Estados de los tipos relación institucion";
-			var technicalMessage = "Se ha presentado un  problema de tipo SQLException dentro del metodo setParameters de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando consultar la información de las Zonas";
+			var technicalMessage = "Se ha presentado un  problema de tipo SQLException dentro del metodo setParameters de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			
 		}catch (final Exception exception) {
 			
-			var userMessage = "Se ha presentado un problema inesperado tratando de consultar la información del nuevo Estado";
-			var technicalMessage = "Un problema inesperado dentro del metodo setParameters de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema inesperado tratando de consultar la información de la zona";
+			var technicalMessage = "Un problema inesperado dentro del metodo setParameters de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 		}
@@ -225,7 +228,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 		
 		try(var resultSet = preparedStatement.executeQuery()){
 			while(resultSet.next()) {
-				var entityTmp = new ZonaEntity(resultSet.getObject("identificador", UUID.class), resultSet.getString("nombre"),resultSet.getObject("zonaPadre", ZonaEntity.class), resultSet.getString("potencialElectoral"));
+				var entityTmp = new ZonaEntity(resultSet.getObject("identificador", UUID.class), resultSet.getString("nombre"),resultSet.getObject("zonaPadre", ZonaEntity.class) ,resultSet.getString("potencialElectoral"));
 				
 				result.add(entityTmp);
 			}
@@ -234,8 +237,8 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			
 		}catch (final SQLException exception) {
 			
-			var userMessage = "Se ha presentado un problema tratando consultar la información de los Estados de los tipos relación institucion";
-			var technicalMessage = "Se ha presentado un  problema de tipo SQLException dentro del metodo setParameters de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor verifique la traza completa del error...";
+			var userMessage = "Se ha presentado un problema tratando consultar la información de las zonas";
+			var technicalMessage = "Se ha presentado un  problema de tipo SQLException dentro del metodo setParameters de la clase ZonaSqlServerDAO. Por favor verifique la traza completa del error...";
 			
 			throw EvocDataException.create(technicalMessage, userMessage, exception);
 			

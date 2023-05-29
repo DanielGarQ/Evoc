@@ -11,19 +11,19 @@ public final class LocacionDTO {
 	private UUID identificador;
 	private String direccion;
 	private String descripcion;
-	private int potencialElectoral;
+	private String potencialElectoral;
 	private ZonaDTO zona;
 	
 	public LocacionDTO() {
 		super();
-		setIdentificador(UtilUUID.DEFAULT_UUID);;
+		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setDireccion(direccion);
 		setDescripcion(UtilText.EMPTY);
-		setPotencialElectoral(potencialElectoral);
+		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 		setZona(ZonaDTO.create());
 	}
 	
-	public LocacionDTO(final UUID identificador, final String direccion, final String descripcion, final int potencialElectoral, final ZonaDTO zona) {
+	public LocacionDTO(final UUID identificador, final String direccion, final String descripcion, final String potencialElectoral, final ZonaDTO zona) {
 		super();
 		setIdentificador(identificador);
 		setDireccion(direccion);
@@ -57,11 +57,11 @@ public final class LocacionDTO {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
 	}
-	public final int getPotencialElectoral() {
+	public final String getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	public final LocacionDTO setPotencialElectoral(final int potencialElectoral) {
-		this.potencialElectoral = potencialElectoral;
+	public final LocacionDTO setPotencialElectoral(final String potencialElectoral) {
+		this.potencialElectoral = UtilText.getUtilText().getDefaultValue();
 		return this;
 	}
 	public final ZonaDTO getZona() {

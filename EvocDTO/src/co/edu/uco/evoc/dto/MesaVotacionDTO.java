@@ -10,7 +10,7 @@ public final class MesaVotacionDTO {
 	
 	private UUID identificador;
 	private String numeroMesa;
-	private int potencialElectoral;
+	private String potencialElectoral;
 	private LocacionDTO locacion;
 	private EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado;
 	
@@ -18,12 +18,12 @@ public final class MesaVotacionDTO {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNumeroMesa(UtilText.getUtilText().getDefaultValue());
-		setPotencialElectoral(potencialElectoral);
+		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 		setLocacion(LocacionDTO.create());
 		setEstadoMesaVotacionCalculado(EstadoMesaVotacionCalculadoDTO.create());
 	}
 	
-	public MesaVotacionDTO(final UUID identificador, final String numeroMesa, final int potencialElectoral, final LocacionDTO locacion,
+	public MesaVotacionDTO(final UUID identificador, final String numeroMesa, final String potencialElectoral, final LocacionDTO locacion,
 			final EstadoMesaVotacionCalculadoDTO estadoMesaVotacionCalculado) {
 		super();
 		setIdentificador(identificador);
@@ -51,11 +51,11 @@ public final class MesaVotacionDTO {
 		this.numeroMesa = UtilText.getUtilText().applyTrim(numeroMesa);
 		return this;
 	}
-	public final int getPotencialElectoral() {
+	public final String getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	public final MesaVotacionDTO setPotencialElectoral(final int potencialElectoral) {
-		this.potencialElectoral = potencialElectoral;
+	public final MesaVotacionDTO setPotencialElectoral(final String potencialElectoral) {
+		this.potencialElectoral = UtilText.getUtilText().getDefaultValue();
 		return this;
 	}
 	public final LocacionDTO getLocacion() {
