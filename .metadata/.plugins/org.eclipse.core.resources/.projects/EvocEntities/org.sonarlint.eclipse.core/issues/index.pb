@@ -1,6 +1,4 @@
 
-^
-.src/co/edu/uco/evoc/entities/package-info.java,c\d\cd8121150976881816fe6d75c1d8d1bae8e61e0c
 e
 5src/co/edu/uco/evoc/entities/TipoCandidatoEntity.java,d\0\d058f8086622dbd8e1ac8afdfec57ccdc2e0592b
 j

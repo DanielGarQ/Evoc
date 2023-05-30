@@ -2,12 +2,21 @@ package co.edu.uco.evoc.entities;
 
 import java.util.Date;
 import java.util.UUID;
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 
 public class VotanteRegistradoEntity extends PersonaEntity{
 	
+	private static final VotanteRegistradoEntity DEFAULT_OBJECT = new VotanteRegistradoEntity();
 	private MesaVotacionEntity mesaVotacion;
 	private Date fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
+	
+	private VotanteRegistradoEntity() {
+		super();
+		setMesaVotacion(MesaVotacionEntity.getDefaultObject());
+		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
+		setValidacionDactilar(validacionDactilar);
+	}
 
 	public VotanteRegistradoEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion, String identificacion,
 			String nombre, String apellido, MesaVotacionEntity mesaVotacion, Date fechaExpedicionIdentificacion,
@@ -17,11 +26,16 @@ public class VotanteRegistradoEntity extends PersonaEntity{
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
 	}
+	
+	public static VotanteRegistradoEntity getDefaultObject() {
+		return DEFAULT_OBJECT;
+	}
+	
 	public final MesaVotacionEntity getMesaVotacion() {
 		return mesaVotacion;
 	}
 	private final void setMesaVotacion(final MesaVotacionEntity mesaVotacion) {
-		this.mesaVotacion = mesaVotacion;
+		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionEntity.getDefaultObject());
 	}
 	public final Date getFechaExpedicionIdentificacion() {
 		return fechaExpedicionIdentificacion;

@@ -1,0 +1,17 @@
+
+b
+java:S2695$"/This "PreparedStatement" only has 3 parameters.(¾äáŞøÿÿÿÿ8ÕÉ©¡…1HÖRBLOCKERZBUG
+b
+java:S2695i"/This "PreparedStatement" only has 3 parameters.(¾äáŞøÿÿÿÿ8è‡™Â†1HÕRBLOCKERZBUG
+~
+java:S1192º"GDefine a constant instead of duplicating this literal "WHERE " 3 times.(’ƒç’8¼”õÇ†1HÛRCRITICALZ
+CODE_SMELL
+]
+java:S2695†"/This "PreparedStatement" only has 1 parameters.(şG8¼”õÇ†1HßRBLOCKERZBUG
+^
+java:S2695‡"/This "PreparedStatement" only has 1 parameters.(€›­Â8¼”õÇ†1HàRBLOCKERZBUG
+c
+java:S2695ˆ"/This "PreparedStatement" only has 1 parameters.(¾äáŞøÿÿÿÿ8¼”õÇ†1HáRBLOCKERZBUG
+‰
+java:S3776©"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(öÛØ8¼”õÇ†1HâRCRITICALZ
+CODE_SMELL

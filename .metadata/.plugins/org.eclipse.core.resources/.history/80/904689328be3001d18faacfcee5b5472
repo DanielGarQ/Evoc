@@ -1,9 +1,0 @@
-package co.edu.uco.evoc.dto;
-
-public final class CartonVotacionDTO {
-	
-	private UUID identificador;
-	private Candidato candidatos: List<Candidato>;
-	private 
-
-}

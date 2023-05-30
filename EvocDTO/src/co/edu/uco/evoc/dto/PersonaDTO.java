@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -16,7 +17,7 @@ public class PersonaDTO {
 	public PersonaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setTipoIdentificacion(tipoIdentificacion);
+		setTipoIdentificacion(TipoIdentificacionDTO.create());
 		setIdentificacion(identificacion);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setApellido(UtilText.getUtilText().getDefaultValue());
@@ -31,6 +32,11 @@ public class PersonaDTO {
 		setNombre(nombre);
 		setApellido(apellido);
 	}
+	
+	public static PersonaDTO create() {
+		return new PersonaDTO();
+	}
+	
 	public UUID getIdentificador() {
 		return identificador;
 	}
@@ -41,14 +47,16 @@ public class PersonaDTO {
 	public TipoIdentificacionDTO getTipoIdentificacion() {
 		return tipoIdentificacion;
 	}
-	public void setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
-		this.tipoIdentificacion = tipoIdentificacion;
+	public PersonaDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
+		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDTO.create());
+		return this;
 	}
 	public String getIdentificacion() {
 		return identificacion;
 	}
-	public void setIdentificacion(String identificacion) {
+	public PersonaDTO setIdentificacion(String identificacion) {
 		this.identificacion = identificacion;
+		return this;
 	}
 	public String getNombre() {
 		return nombre;

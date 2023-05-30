@@ -1,0 +1,21 @@
+package co.edu.uco.evoc.crosscutting.exception;
+
+public final class EvocDtoException extends EvocException{
+
+	
+	
+	private EvocDtoException(String technicalMessage, String userMessage, Throwable rootCause) {
+		super(technicalMessage, userMessage, rootCause, ExceptionType.API);
+	}
+	
+	public static EvocDtoException create(final String technicalMessage, final String userMessage, final Throwable rootCause) {
+		return new EvocDtoException(technicalMessage, userMessage, rootCause);
+	}
+	public static EvocDtoException create(final String userMessage) {
+		return new EvocDtoException(userMessage, userMessage, new Exception());
+	}
+	public static EvocDtoException create(final String technicalMessage, final String userMessage) {
+		return new EvocDtoException(technicalMessage, userMessage, new Exception());
+	}
+
+}

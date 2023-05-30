@@ -1,0 +1,5 @@
+package co.edu.uco.evoc.data.dao.relational.postgresql;
+
+public final class ZonaPostgreSqlDAO {
+
+}

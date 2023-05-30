@@ -1,0 +1,21 @@
+package co.edu.uco.evoc.crosscutting.exception;
+
+public final class EvocCrossCuttingException extends EvocException{
+
+	private static final long serialVersionUID = -5203808137334096879L;
+	
+	private EvocCrossCuttingException(String technicalMessage, String userMessage, Throwable rootCause) {
+		super(technicalMessage, userMessage, rootCause, ExceptionType.API);
+	}
+	
+	public static EvocCrossCuttingException create(final String technicalMessage, final String userMessage, final Throwable rootCause) {
+		return new EvocCrossCuttingException(technicalMessage, userMessage, rootCause);
+	}
+	public static EvocCrossCuttingException create(final String userMessage) {
+		return new EvocCrossCuttingException(userMessage, userMessage, new Exception());
+	}
+	public static EvocCrossCuttingException create(final String technicalMessage, final String userMessage) {
+		return new EvocCrossCuttingException(technicalMessage, userMessage, new Exception());
+	}
+
+}

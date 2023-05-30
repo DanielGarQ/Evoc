@@ -1,0 +1,9 @@
+package co.edu.uco.evoc.crosscutting.exception;
+
+public final class EvocApiException extends EvocException{
+
+	protected EvocApiException(String technicalMessage, String userMessage, Throwable rootCause) {
+		super(technicalMessage, userMessage, rootCause, ExceptionType.API);
+	}
+
+}
