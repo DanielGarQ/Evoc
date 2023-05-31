@@ -3,8 +3,6 @@ package co.edu.uco.evoc.dto;
 import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
-
 public final class RegistradorDTO extends PersonaDTO {
 	
 	private TipoRegistradorDTO tipoRegistrador;
@@ -17,13 +15,13 @@ public final class RegistradorDTO extends PersonaDTO {
 	
 	public RegistradorDTO() {
 		super();
-		setTipoRegistrador(TipoRegistradorDTO.create());
-		setRegistraduria(RegistraduriaDTO.create());
+		setTipoRegistrador(tipoRegistrador);
+		setRegistraduria(registraduria);
 		setTelefono(telefono);
 		setCorreo(correo);
 		setFechaInicialCargo(fechaInicialCargo);
 		setFechaFinalCargo(fechaFinalCargo);
-		setEstadoRegistrador(EstadoRegistradorDTO.create());
+		setEstadoRegistrador(estadoRegistrador);
 	}
 	
 	public RegistradorDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
@@ -47,14 +45,14 @@ public final class RegistradorDTO extends PersonaDTO {
 		return tipoRegistrador;
 	}
 	public final RegistradorDTO setTipoRegistrador(final TipoRegistradorDTO tipoRegistrador) {
-		this.tipoRegistrador = UtilObject.getDefault(tipoRegistrador, TipoRegistradorDTO.create());
+		this.tipoRegistrador = tipoRegistrador;
 		return this;
 	}
 	public final RegistraduriaDTO getRegistraduria() {
 		return registraduria;
 	}
 	public final RegistradorDTO setRegistraduria(final RegistraduriaDTO registraduria) {
-		this.registraduria = UtilObject.getDefault(registraduria, RegistraduriaDTO.create());
+		this.registraduria = registraduria;
 		return this;
 	}
 	public final String getTelefono() {
@@ -89,7 +87,7 @@ public final class RegistradorDTO extends PersonaDTO {
 		return estadoRegistrador;
 	}
 	public final RegistradorDTO setEstadoRegistrador(final EstadoRegistradorDTO estadoRegistrador) {
-		this.estadoRegistrador = UtilObject.getDefault(estadoRegistrador, EstadoRegistradorDTO.create());
+		this.estadoRegistrador = estadoRegistrador;
 		return this;
 	}
 	

@@ -18,14 +18,14 @@ public final class RegistraduriaDTO {
 		setDescripcion(UtilText.EMPTY);
 	}
 	
-	public RegistraduriaDTO(final UUID identificador, final String nombre, final String descripcion) {
+	public RegistraduriaDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
-	public static RegistraduriaDTO create() {
-		return new RegistraduriaDTO();
+	public static TipoCandidatoDTO create() {
+		return new TipoCandidatoDTO();
 	}
 	
 	public final UUID getIdentificador() {

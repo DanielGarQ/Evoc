@@ -2,8 +2,6 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
-
 public class JuradoRemanenteDTO extends PersonaDTO {
 	
 	private String telefono;
@@ -14,7 +12,7 @@ public class JuradoRemanenteDTO extends PersonaDTO {
 		super();
 		setTelefono(telefono);
 		setCorreo(correo);
-		setMesaVotacion(MesaVotacionDTO.create());
+		setMesaVotacion(mesaVotacion);
 	}
 	
 	public JuradoRemanenteDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
@@ -47,7 +45,7 @@ public class JuradoRemanenteDTO extends PersonaDTO {
 		return mesaVotacion;
 	}
 	public final JuradoRemanenteDTO setMesaVotacion(final MesaVotacionDTO mesaVotacion) {
-		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDTO.create());
+		this.mesaVotacion = mesaVotacion;
 		return this;
 	}
 

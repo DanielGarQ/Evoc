@@ -25,8 +25,8 @@ public final class TipoIdentificacionDTO {
 		setDescripcion(descripcion);
 	}
 	
-	public static TipoIdentificacionDTO create() {
-		return new TipoIdentificacionDTO();
+	public static TipoCandidatoDTO create() {
+		return new TipoCandidatoDTO();
 	}
 	
 	public final UUID getIdentificador() {

@@ -2,7 +2,6 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
 public final class CartonesPorMesaDTO {
@@ -16,9 +15,9 @@ public final class CartonesPorMesaDTO {
 	public CartonesPorMesaDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setMesaVotacion(MesaVotacionDTO.create());
-		setCartonVotacion(CartonVotacionDTO.create());
-		setVotante(VotanteRegistradoDTO.create());
+		setMesaVotacion(mesaVotacion);
+		setCartonVotacion(cartonVotacion);
+		setVotante(votante);
 		setMarcacion(marcacion);
 	}
 	
@@ -47,21 +46,21 @@ public final class CartonesPorMesaDTO {
 		return mesaVotacion;
 	}
 	public final CartonesPorMesaDTO setMesaVotacion(final MesaVotacionDTO mesaVotacion) {
-		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDTO.create());
+		this.mesaVotacion = mesaVotacion;
 		return this;
 	}
 	public final CartonVotacionDTO getCartonVotacion() {
 		return cartonVotacion;
 	}
 	public final CartonesPorMesaDTO setCartonVotacion(final CartonVotacionDTO cartonVotacion) {
-		this.cartonVotacion = UtilObject.getDefault(cartonVotacion, CartonVotacionDTO.create());
+		this.cartonVotacion = cartonVotacion;
 		return this;
 	}
 	public final VotanteRegistradoDTO getVotante() {
 		return votante;
 	}
 	public final CartonesPorMesaDTO setVotante(final VotanteRegistradoDTO votante) {
-		this.votante = UtilObject.getDefault(votante, VotanteRegistradoDTO.create());
+		this.votante = votante;
 		return this;
 	}
 	public final boolean isMarcacion() {

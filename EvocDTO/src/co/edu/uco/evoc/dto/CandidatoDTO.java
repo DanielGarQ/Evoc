@@ -2,8 +2,6 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
-
 public final class CandidatoDTO extends PersonaDTO {
 	
 	private TipoCandidatoDTO tipoCandidato;
@@ -11,8 +9,8 @@ public final class CandidatoDTO extends PersonaDTO {
 	
 	public CandidatoDTO() {
 		super();
-		setTipoCandidato(TipoCandidatoDTO.create());
-		setPartido(PartidoDTO.create());
+		setTipoCandidato(tipoCandidato);
+		setPartido(partido);
 	}
 	
 	public CandidatoDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
@@ -31,14 +29,14 @@ public final class CandidatoDTO extends PersonaDTO {
 		return tipoCandidato;
 	}
 	public final CandidatoDTO setTipoCandidato(final TipoCandidatoDTO tipoCandidato) {
-		this.tipoCandidato = UtilObject.getDefault(tipoCandidato, TipoCandidatoDTO.create());
+		this.tipoCandidato = tipoCandidato;
 		return this;
 	}
 	public final PartidoDTO getPartido() {
 		return partido;
 	}
 	public final CandidatoDTO setPartido(final PartidoDTO partido) {
-		this.partido = UtilObject.getDefault(partido, PartidoDTO.create());
+		this.partido = partido;
 		return this;
 	}
 

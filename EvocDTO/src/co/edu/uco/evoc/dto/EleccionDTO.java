@@ -3,7 +3,6 @@ package co.edu.uco.evoc.dto;
 import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -22,12 +21,12 @@ public final class EleccionDTO {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
-		setTipoEleccion(TipoEleccionDTO.create());
-		setZona(ZonaDTO.create());
+		setTipoEleccion(tipoEleccion);
+		setZona(zona);
 		setFechaInicial(fechaInicial);
 		setFechaFinal(fechaFinal);
-		setRegistrador(RegistradorDTO.create());
-		setEstadoEleccion(EstadoEleccionDTO.create());
+		setRegistrador(registrador);
+		setEstadoEleccion(estadoEleccion);
 	}
 	
 	public EleccionDTO(final UUID identificador, final String nombre, final TipoEleccionDTO tipoEleccion, final ZonaDTO zona, final Date fechaInicial,
@@ -65,14 +64,14 @@ public final class EleccionDTO {
 		return tipoEleccion;
 	}
 	public final EleccionDTO setTipoEleccion(final TipoEleccionDTO tipoEleccion) {
-		this.tipoEleccion = UtilObject.getDefault(tipoEleccion, TipoEleccionDTO.create());
+		this.tipoEleccion = tipoEleccion;
 		return this;
 	}
 	public final ZonaDTO getZona() {
 		return zona;
 	}
 	public final EleccionDTO setZona(final ZonaDTO zona) {
-		this.zona = UtilObject.getDefault(zona, ZonaDTO.create());
+		this.zona = zona;
 		return this;
 	}
 	public final Date getFechaInicial() {
@@ -93,14 +92,14 @@ public final class EleccionDTO {
 		return registrador;
 	}
 	public final EleccionDTO setRegistrador(final RegistradorDTO registrador) {
-		this.registrador = UtilObject.getDefault(registrador, RegistradorDTO.create());
+		this.registrador = registrador;
 		return this;
 	}
 	public final EstadoEleccionDTO getEstadoEleccion() {
 		return estadoEleccion;
 	}
 	public final EleccionDTO setEstadoEleccion(final EstadoEleccionDTO estadoEleccion) {
-		this.estadoEleccion = UtilObject.getDefault(estadoEleccion, EstadoEleccionDTO.create());
+		this.estadoEleccion = estadoEleccion;
 		return this;
 	}
 

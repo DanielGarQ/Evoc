@@ -11,10 +11,10 @@ public final class UtilText {
 	}
 	
 	public static final UtilText getUtilText() {
-		return INSTANCE; 
+		return INSTANCE;
 	}
 	
-	public final boolean isNull(final String text) {
+	public final  boolean isNull(final String text) {
 		return UtilObject.isNull(text);
 	}
 	
@@ -22,11 +22,12 @@ public final class UtilText {
 		
 		String result = text;
 		
-		if (isNull(text)) {
-			result = isNull(defaultValue) ? EMPTY : defaultValue;	
+		if(isNull(text)) {
+			result = isNull(defaultValue) ? EMPTY : defaultValue;
 		}
 		
 		return result;
+		
 	}
 	
 	public final String getDefault(final String text) {
@@ -37,21 +38,19 @@ public final class UtilText {
 		return EMPTY;
 	}
 	
-	public final boolean isEmpty(final String text) {
-		return applyTrim(text).equals(EMPTY);
-	}
-	
-	public final String getDefaultIfEmpty(final String text, final String defaultValue) {
-		return isEmpty(text) ? getDefault(defaultValue) : text;
-	}
-	
 	public final String applyTrim(final String text) {
 		return getDefault(text).trim();
-		
 	}
 	
-	final boolean matchPattern(final String text, final String pattern) {
+	public final boolean matchPattern(final String text, final String pattern) {
 		return getDefault(text).matches(getDefault(pattern));
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(getUtilText().applyTrim(" mi casita   "));
+		
+		
 	}
 
 }

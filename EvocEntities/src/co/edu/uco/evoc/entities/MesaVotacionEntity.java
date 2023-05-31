@@ -2,30 +2,16 @@ package co.edu.uco.evoc.entities;
 
 import java.util.UUID;
 
-import co.edu.uco.evoc.crosscutting.utils.UtilObject;
-import co.edu.uco.evoc.crosscutting.utils.UtilText;
-import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
-
 public class MesaVotacionEntity {
 	
-	private static final MesaVotacionEntity DEFAULT_OBJECT = new MesaVotacionEntity();
 	private UUID identificador;
 	private String numeroMesa;
-	private String potencialElectoral;
+	private int potencialElectoral;
 	private LocacionEntity locacion;
 	private EstadoMesaVotacionCalculadoEntity estadoMesaVotacionCalculado;
 	
-	private MesaVotacionEntity() {
-		super();
-		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroMesa(UtilText.getUtilText().getDefaultValue());
-		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
-		setLocacion(LocacionEntity.getDefaultObject());
-		setEstadoMesaVotacionCalculado(EstadoMesaVotacionCalculadoEntity.getDefaultObject());
-	}
-	
-	public MesaVotacionEntity(final UUID identificador, final String numeroMesa, final String potencialElectoral, final LocacionEntity locacion,
-			final EstadoMesaVotacionCalculadoEntity estadoMesaVotacionCalculado) {
+	public MesaVotacionEntity(UUID identificador, String numeroMesa, int potencialElectoral, LocacionEntity locacion,
+			EstadoMesaVotacionCalculadoEntity estadoMesaVotacionCalculado) {
 		super();
 		setIdentificador(identificador);
 		setNumeroMesa(numeroMesa);
@@ -33,40 +19,35 @@ public class MesaVotacionEntity {
 		setLocacion(locacion);
 		setEstadoMesaVotacionCalculado(estadoMesaVotacionCalculado);
 	}
-	
-	public static MesaVotacionEntity getDefaultObject() {
-		return DEFAULT_OBJECT;
-	}
-	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
 	private final void setIdentificador(final UUID identificador) {
-		this.identificador = UtilUUID.getDefault(identificador);
+		this.identificador = identificador;
 	}
 	public final String getNumeroMesa() {
 		return numeroMesa;
 	}
 	private final void setNumeroMesa(final String numeroMesa) {
-		this.numeroMesa = UtilText.getUtilText().applyTrim(numeroMesa);
+		this.numeroMesa = numeroMesa;
 	}
-	public final String getPotencialElectoral() {
+	public final int getPotencialElectoral() {
 		return potencialElectoral;
 	}
-	private final void setPotencialElectoral(final String potencialElectoral) {
-		this.potencialElectoral = UtilText.getUtilText().getDefaultValue();
+	private final void setPotencialElectoral(final int potencialElectoral) {
+		this.potencialElectoral = potencialElectoral;
 	}
 	public final LocacionEntity getLocacion() {
 		return locacion;
 	}
 	private final void setLocacion(final LocacionEntity locacion) {
-		this.locacion = UtilObject.getDefault(locacion, LocacionEntity.getDefaultObject());
+		this.locacion = locacion;
 	}
 	public final EstadoMesaVotacionCalculadoEntity getEstadoMesaVotacionCalculado() {
 		return estadoMesaVotacionCalculado;
 	}
 	private final void setEstadoMesaVotacionCalculado(final EstadoMesaVotacionCalculadoEntity estadoMesaVotacionCalculado) {
-		this.estadoMesaVotacionCalculado = UtilObject.getDefault(estadoMesaVotacionCalculado, EstadoMesaVotacionCalculadoEntity.getDefaultObject());
+		this.estadoMesaVotacionCalculado = estadoMesaVotacionCalculado;
 	}
 
 }
