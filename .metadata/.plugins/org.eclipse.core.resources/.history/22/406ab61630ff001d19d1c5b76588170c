@@ -1,0 +1,17 @@
+package co.edu.uco.evoc.business.facade;
+
+import java.util.List;
+
+import co.edu.uco.evoc.dto.NivelTipoEleccionDTO;
+
+public interface EstadoMesaVotacionCalculadoFacade {
+
+	void register(NivelTipoEleccionDTO dto);
+
+	List<NivelTipoEleccionDTO> list(NivelTipoEleccionDTO dto);
+
+	void modify(NivelTipoEleccionDTO dto);
+
+	void drop(NivelTipoEleccionDTO dto);
+
+}

@@ -2,6 +2,7 @@ package co.edu.uco.evoc.dto;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -15,7 +16,7 @@ public final class TipoEleccionDTO {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
-		setNivelTipoEleccion(nivelTipoEleccion);
+		setNivelTipoEleccion(NivelTipoEleccionDTO.create());
 	}
 	
 	public TipoEleccionDTO(UUID identificador, String nombre, NivelTipoEleccionDTO nivelTipoEleccion) {
@@ -47,7 +48,7 @@ public final class TipoEleccionDTO {
 		return nivelTipoEleccion;
 	}
 	public final TipoEleccionDTO setNivelTipoEleccion(final NivelTipoEleccionDTO nivelTipoEleccion) {
-		this.nivelTipoEleccion = nivelTipoEleccion;
+		this.nivelTipoEleccion = UtilObject.getDefault(nivelTipoEleccion, NivelTipoEleccionDTO.create());
 		return this;
 	}
 	

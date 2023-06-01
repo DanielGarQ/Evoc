@@ -1,0 +1,49 @@
+package co.edu.uco.evoc.business.business.impl;
+
+import java.util.List;
+
+import co.edu.uco.evoc.business.assembler.concrete.ZonaAssembler;
+import co.edu.uco.evoc.business.business.ZonaBusiness;
+import co.edu.uco.evoc.business.domain.ZonaDomain;
+import co.edu.uco.evoc.data.dao.factory.DAOFactory;
+import co.edu.uco.evoc.entities.ZonaEntity;
+
+public class ZonaBusinessImpl implements ZonaBusiness {
+
+	DAOFactory daoFactory;
+
+	public ZonaBusinessImpl(final DAOFactory daoFactory) {
+		this.daoFactory = daoFactory;
+	}
+
+	@Override
+	public void register(ZonaDomain domain) {
+		final ZonaEntity entity = ZonaAssembler.getInstance().toEntityFromDomain(domain);
+		daoFactory.getZonaDAO().create(entity);
+
+	}
+
+	@Override
+	public List<VersionDomain> list(VersionDomain domain) {
+		final VersionEntity entity = VersionAssembler.getInstance().toEntityFromDomain(domain);
+
+		List<VersionEntity> resultEntityList = daoFactory.getVersionDAO().read(entity);
+
+		return VersionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
+	}
+
+	@Override
+	public void modify(VersionDomain domain) {
+		final VersionEntity entity = VersionAssembler.getInstance().toEntityFromDomain(domain);
+		daoFactory.getVersionDAO().update(entity);
+
+	}
+
+	@Override
+	public void drop(VersionDomain domain) {
+		final VersionEntity entity = VersionAssembler.getInstance().toEntityFromDomain(domain);
+		daoFactory.getVersionDAO().delete(entity);
+
+	}
+
+}

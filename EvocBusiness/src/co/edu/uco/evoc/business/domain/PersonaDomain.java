@@ -2,6 +2,10 @@ package co.edu.uco.evoc.business.domain;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+
 public class PersonaDomain {
 	
 	protected UUID identificador;
@@ -9,6 +13,15 @@ public class PersonaDomain {
 	protected String identificacion;
 	protected String nombre;
 	protected String apellido;
+	
+	protected PersonaDomain() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setTipoIdentificacion(TipoIdentificacionDomain.getDefaultObject());
+		setIdentificacion(identificacion);
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setApellido(UtilText.getUtilText().getDefaultValue());
+	}
 
 	public PersonaDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
 			String nombre, String apellido) {
@@ -23,13 +36,13 @@ public class PersonaDomain {
 		return identificador;
 	}
 	protected void setIdentificador(UUID identificador) {
-		this.identificador = identificador;
+		this.identificador = UtilUUID.getDefault(identificador);
 	}
 	public TipoIdentificacionDomain getTipoIdentificacion() {
 		return tipoIdentificacion;
 	}
 	protected void setTipoIdentificacion(TipoIdentificacionDomain tipoIdentificacion) {
-		this.tipoIdentificacion = tipoIdentificacion;
+		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDomain.getDefaultObject());
 	}
 	public String getIdentificacion() {
 		return identificacion;
@@ -41,13 +54,13 @@ public class PersonaDomain {
 		return nombre;
 	}
 	protected void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 	}
 	public String getApellido() {
 		return apellido;
 	}
 	protected void setApellido(String apellido) {
-		this.apellido = apellido;
+		this.apellido = UtilText.getUtilText().applyTrim(apellido);
 	}
 
 }

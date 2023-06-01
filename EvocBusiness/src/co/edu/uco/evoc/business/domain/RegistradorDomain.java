@@ -3,8 +3,11 @@ package co.edu.uco.evoc.business.domain;
 import java.util.Date;
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+
 public class RegistradorDomain extends PersonaDomain {
 	
+	private static final RegistradorDomain DEFAULT_OBJECT = new RegistradorDomain();
 	private TipoRegistradorDomain tipoRegistrador;
 	private RegistraduriaDomain registraduria;
 	private String telefono;
@@ -12,6 +15,17 @@ public class RegistradorDomain extends PersonaDomain {
 	private Date fechaInicialCargo;
 	private Date fechaFinalCargo;
 	private EstadoRegistradorDomain estadoRegistrador;
+	
+	private RegistradorDomain() {
+		super();
+		setTipoRegistrador(TipoRegistradorDomain.getDefaultObject());
+		setRegistraduria(RegistraduriaDomain.getDefaultObject());
+		setTelefono(telefono);
+		setCorreo(correo);
+		setFechaInicialCargo(fechaInicialCargo);
+		setFechaFinalCargo(fechaFinalCargo);
+		setEstadoRegistrador(EstadoRegistradorDomain.getdefaultObject());
+	}
 	
 	public RegistradorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
 			String nombre, String apellido,TipoRegistradorDomain tipoRegistrador, RegistraduriaDomain registraduria, String telefono,
@@ -25,17 +39,22 @@ public class RegistradorDomain extends PersonaDomain {
 		setFechaFinalCargo(fechaFinalCargo);
 		setEstadoRegistrador(estadoRegistrador);
 	}
+	
+	public static RegistradorDomain getDefaultobject() {
+		return DEFAULT_OBJECT;
+	}
+	
 	public final TipoRegistradorDomain getTipoRegistrador() {
 		return tipoRegistrador;
 	}
 	private final void setTipoRegistrador(final TipoRegistradorDomain tipoRegistrador) {
-		this.tipoRegistrador = tipoRegistrador;
+		this.tipoRegistrador = UtilObject.getDefault(tipoRegistrador, TipoRegistradorDomain.getDefaultObject());
 	}
 	public final RegistraduriaDomain getRegistraduria() {
 		return registraduria;
 	}
 	private final void setRegistraduria(final RegistraduriaDomain registraduria) {
-		this.registraduria = registraduria;
+		this.registraduria = UtilObject.getDefault(registraduria, RegistraduriaDomain.getDefaultObject());
 	}
 	public final String getTelefono() {
 		return telefono;
@@ -65,7 +84,7 @@ public class RegistradorDomain extends PersonaDomain {
 		return estadoRegistrador;
 	}
 	private final void setEstadoRegistrador(final EstadoRegistradorDomain estadoRegistrador) {
-		this.estadoRegistrador = estadoRegistrador;
+		this.estadoRegistrador = UtilObject.getDefault(estadoRegistrador, EstadoRegistradorDomain.getdefaultObject());
 	}
 
 }

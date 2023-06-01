@@ -2,12 +2,21 @@ package co.edu.uco.evoc.business.domain;
 
 import java.util.Date;
 import java.util.UUID;
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 
 public class VotanteRegistradoDomain extends PersonaDomain {
 	
+	private static final VotanteRegistradoDomain DEFAULT_OBJECT = new VotanteRegistradoDomain();
 	private MesaVotacionDomain mesaVotacion;
 	private Date fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
+	
+	private VotanteRegistradoDomain() {
+		super();
+		setMesaVotacion(MesaVotacionDomain.getDefaultObject());
+		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
+		setValidacionDactilar(validacionDactilar);
+	}
 
 	public VotanteRegistradoDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
 			String nombre, String apellido, MesaVotacionDomain mesaVotacion, Date fechaExpedicionIdentificacion,
@@ -17,11 +26,16 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
 	}
+	
+	public static VotanteRegistradoDomain getDefaultObject() {
+		return DEFAULT_OBJECT;
+	}
+	
 	public final MesaVotacionDomain getMesaVotacion() {
 		return mesaVotacion;
 	}
 	private final void setMesaVotacion(final MesaVotacionDomain mesaVotacion) {
-		this.mesaVotacion = mesaVotacion;
+		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDomain.getDefaultObject());
 	}
 	public final Date getFechaExpedicionIdentificacion() {
 		return fechaExpedicionIdentificacion;

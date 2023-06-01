@@ -3,6 +3,7 @@ package co.edu.uco.evoc.dto;
 import java.util.Date;
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
@@ -21,12 +22,12 @@ public final class EleccionDTO {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
-		setTipoEleccion(tipoEleccion);
-		setZona(zona);
+		setTipoEleccion(TipoEleccionDTO.create());
+		setZona(ZonaDTO.create());
 		setFechaInicial(fechaInicial);
 		setFechaFinal(fechaFinal);
-		setRegistrador(registrador);
-		setEstadoEleccion(estadoEleccion);
+		setRegistrador(RegistradorDTO.create());
+		setEstadoEleccion(EstadoEleccionDTO.create());
 	}
 	
 	public EleccionDTO(final UUID identificador, final String nombre, final TipoEleccionDTO tipoEleccion, final ZonaDTO zona, final Date fechaInicial,
@@ -64,14 +65,14 @@ public final class EleccionDTO {
 		return tipoEleccion;
 	}
 	public final EleccionDTO setTipoEleccion(final TipoEleccionDTO tipoEleccion) {
-		this.tipoEleccion = tipoEleccion;
+		this.tipoEleccion = UtilObject.getDefault(tipoEleccion, TipoEleccionDTO.create());
 		return this;
 	}
 	public final ZonaDTO getZona() {
 		return zona;
 	}
 	public final EleccionDTO setZona(final ZonaDTO zona) {
-		this.zona = zona;
+		this.zona = UtilObject.getDefault(zona, ZonaDTO.create());
 		return this;
 	}
 	public final Date getFechaInicial() {
@@ -92,14 +93,14 @@ public final class EleccionDTO {
 		return registrador;
 	}
 	public final EleccionDTO setRegistrador(final RegistradorDTO registrador) {
-		this.registrador = registrador;
+		this.registrador = UtilObject.getDefault(registrador, RegistradorDTO.create());
 		return this;
 	}
 	public final EstadoEleccionDTO getEstadoEleccion() {
 		return estadoEleccion;
 	}
 	public final EleccionDTO setEstadoEleccion(final EstadoEleccionDTO estadoEleccion) {
-		this.estadoEleccion = estadoEleccion;
+		this.estadoEleccion = UtilObject.getDefault(estadoEleccion, EstadoEleccionDTO.create());
 		return this;
 	}
 

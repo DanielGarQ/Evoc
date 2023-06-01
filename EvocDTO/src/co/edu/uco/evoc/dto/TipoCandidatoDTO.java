@@ -56,20 +56,4 @@ public final class TipoCandidatoDTO {
 		return this;
 	}
 
-	@Override
-	public String toString() {
-		return "TipoCandidatoDTO [identificador=" + identificador + ", nombre=" + nombre + ", descripcion="
-				+ descripcion + "]";
-	}
-	
-	public static void main(String[] args) {
-		
-		TipoCandidatoDTO candidato = new TipoCandidatoDTO();
-		
-		candidato.setIdentificador(null).setNombre("Daniel Garcia").setDescripcion("Soy candidato");
-		
-		System.out.println(candidato);
-		
-	}
-
 }
