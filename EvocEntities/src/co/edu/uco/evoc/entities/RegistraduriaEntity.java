@@ -29,6 +29,19 @@ public class RegistraduriaEntity {
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
+	
+	public static final  RegistraduriaEntity createWithIdentificador(final UUID identificador) {
+		return new RegistraduriaEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  RegistraduriaEntity createWithNombre(final String nombre) {
+		return new RegistraduriaEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  RegistraduriaEntity createWithDescripcion(final String descripcion) {
+		return new RegistraduriaEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public final UUID getIdentificador() {
 		return identificador;
 	}

@@ -101,4 +101,6 @@
 	<section name="SelfEncapsulateFieldWizard">
 		<item key="GenerateJavadoc" value="false"/>
 	</section>
+	<section name="BreadcrumbItemDropDown">
+	</section>
 </section>

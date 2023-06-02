@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.dto;
 
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
@@ -8,7 +7,7 @@ import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 public final class VotanteRegistradoDTO extends PersonaDTO{
 	
 	private MesaVotacionDTO mesaVotacion;
-	private Date fechaExpedicionIdentificacion;
+	private String fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
 	private CartonesPorMesaDTO cartonVotacion;
 	
@@ -21,7 +20,7 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 	}
 	
 	public VotanteRegistradoDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
-			final String nombre, final String apellido, final MesaVotacionDTO mesaVotacion, final Date fechaExpedicionIdentificacion,
+			final String nombre, final String apellido, final MesaVotacionDTO mesaVotacion, final String fechaExpedicionIdentificacion,
 			final boolean validacionDactilar, CartonesPorMesaDTO cartonVotacion) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
@@ -41,10 +40,10 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDTO.create());
 		return this;
 	}
-	public final Date getFechaExpedicionIdentificacion() {
+	public final String getFechaExpedicionIdentificacion() {
 		return fechaExpedicionIdentificacion;
 	}
-	public final VotanteRegistradoDTO setFechaExpedicionIdentificacion(final Date fechaExpedicionIdentificacion) {
+	public final VotanteRegistradoDTO setFechaExpedicionIdentificacion(final String fechaExpedicionIdentificacion) {
 		this.fechaExpedicionIdentificacion = fechaExpedicionIdentificacion;
 		return this;
 	}

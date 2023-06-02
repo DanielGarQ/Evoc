@@ -27,3 +27,11 @@ s
 Csrc/co/edu/uco/evoc/crosscutting/exception/EvocEntityException.java,4\7\472cc82f5a5887ec949c896c85bfc746f451afb7
 c
 3src/co/edu/uco/evoc/crosscutting/utils/UtilSql.java,d\8\d835a0c36786d46490c26b8cc9e87bae91f034a7
+h
+8src/co/edu/uco/evoc/crosscutting/utils/UtilTelefono.java,3\5\35eb7db62c7b917d5320ca33864b100c7926c5b4
+e
+5src/co/edu/uco/evoc/crosscutting/utils/UtilFecha.java,2\f\2f633686e7361421778d07f8a88a4b52d070bb2b
+j
+:src/co/edu/uco/evoc/crosscutting/utils/UtilValidacion.java,0\1\01c49ca3c837872b78984f4ecaf8f856ca133beb
+f
+6src/co/edu/uco/evoc/crosscutting/utils/UtilCorreo.java,f\2\f28dcaede4bb72c378c63a96802a2f718000daee

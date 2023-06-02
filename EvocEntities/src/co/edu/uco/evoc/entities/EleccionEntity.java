@@ -1,8 +1,8 @@
 package co.edu.uco.evoc.entities;
 
-import java.util.Date;
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilFecha;
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilText;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
@@ -14,8 +14,8 @@ public class EleccionEntity {
 	private String nombre;
 	private TipoEleccionEntity tipoEleccion;
 	private ZonaEntity zona;
-	private Date fechaInicial;
-	private Date fechaFinal;
+	private String fechaInicial;
+	private String fechaFinal;
 	private RegistradorEntity registrador;
 	private EstadoEleccionEntity estadoEleccion;
 	
@@ -31,8 +31,8 @@ public class EleccionEntity {
 		setEstadoEleccion(EstadoEleccionEntity.getDefaultObject());
 	}
 	
-	public EleccionEntity(final UUID identificador, final String nombre, final TipoEleccionEntity tipoEleccion, final ZonaEntity zona, final Date fechaInicial,
-			final Date fechaFinal, final RegistradorEntity registrador, final EstadoEleccionEntity estadoELeccion) {
+	public EleccionEntity(final UUID identificador, final String nombre, final TipoEleccionEntity tipoEleccion, final ZonaEntity zona, final String fechaInicial,
+			final String fechaFinal, final RegistradorEntity registrador, final EstadoEleccionEntity estadoELeccion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -42,6 +42,38 @@ public class EleccionEntity {
 		setFechaFinal(fechaFinal);
 		setRegistrador(registrador);
 		setEstadoEleccion(estadoEleccion);
+	}
+	
+	public static final  EleccionEntity createWithIdentificador(final UUID identificador) {
+		return new EleccionEntity(identificador, UtilText.getUtilText().getDefaultValue(),TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithNombre(final String nombre) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,nombre,TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithTipoEleccion(final TipoEleccionEntity tipoEleccion) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), tipoEleccion, ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithZona(final ZonaEntity zona) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), TipoEleccionEntity.getDefaultObject(), zona, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithfechaInicial(final String fechaInicial) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), fechaInicial, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithfechaFinal(final String fechaFinal) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, fechaFinal, RegistradorEntity.getDefaultobject(), EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithfechaRegistrador(final RegistradorEntity registrador) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, registrador, EstadoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  EleccionEntity createWithEstadoEleccion(final EstadoEleccionEntity estadoEleccion) {
+		return new EleccionEntity(UtilUUID.DEFAULT_UUID,UtilText.getUtilText().getDefaultValue(), TipoEleccionEntity.getDefaultObject(), ZonaEntity.getDefaultobject(), UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, RegistradorEntity.getDefaultobject(), estadoEleccion);
 	}
 	
 	public static EleccionEntity getDefaultObject() {
@@ -72,16 +104,16 @@ public class EleccionEntity {
 	private final void setZona(final ZonaEntity zona) {
 		this.zona = UtilObject.getDefault(zona, ZonaEntity.getDefaultobject());
 	}
-	public final Date getFechaInicial() {
+	public final String getFechaInicial() {
 		return fechaInicial;
 	}
-	private final void setFechaInicial(final Date fechaInicial) {
+	private final void setFechaInicial(final String fechaInicial) {
 		this.fechaInicial = fechaInicial;
 	}
-	public final Date getFechaFinal() {
+	public final String getFechaFinal() {
 		return fechaFinal;
 	}
-	private final void setFechaFinal(final Date fechaFinal) {
+	private final void setFechaFinal(final String fechaFinal) {
 		this.fechaFinal = fechaFinal;
 	}
 	public final RegistradorEntity getRegistrador() {

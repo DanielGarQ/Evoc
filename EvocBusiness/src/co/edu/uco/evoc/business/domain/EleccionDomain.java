@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.business.domain;
 
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
@@ -14,8 +13,8 @@ public class EleccionDomain {
 	private String nombre;
 	private TipoEleccionDomain tipoEleccion;
 	private ZonaDomain zona;
-	private Date fechaInicial;
-	private Date fechaFinal;
+	private String fechaInicial;
+	private String fechaFinal;
 	private RegistradorDomain registrador;
 	private EstadoEleccionDomain estadoEleccion;
 	
@@ -31,8 +30,8 @@ public class EleccionDomain {
 		setEstadoEleccion(EstadoEleccionDomain.getDefaultObject());
 	}
 	
-	public EleccionDomain(UUID identificador, String nombre, TipoEleccionDomain tipoEleccion, ZonaDomain zona, Date fechaInicial,
-			Date fechaFinal, RegistradorDomain registrador, EstadoEleccionDomain estadoELeccion) {
+	public EleccionDomain(UUID identificador, String nombre, TipoEleccionDomain tipoEleccion, ZonaDomain zona, String fechaInicial,
+			String fechaFinal, RegistradorDomain registrador, EstadoEleccionDomain estadoELeccion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -72,16 +71,16 @@ public class EleccionDomain {
 	private final void setZona(final ZonaDomain zona) {
 		this.zona = UtilObject.getDefault(zona, ZonaDomain.getDefaultobject());
 	}
-	public final Date getFechaInicial() {
+	public final String getFechaInicial() {
 		return fechaInicial;
 	}
-	private final void setFechaInicial(final Date fechaInicial) {
+	private final void setFechaInicial(final String fechaInicial) {
 		this.fechaInicial = fechaInicial;
 	}
-	public final Date getFechaFinal() {
+	public final String getFechaFinal() {
 		return fechaFinal;
 	}
-	private final void setFechaFinal(final Date fechaFinal) {
+	private final void setFechaFinal(final String fechaFinal) {
 		this.fechaFinal = fechaFinal;
 	}
 	public final RegistradorDomain getRegistrador() {

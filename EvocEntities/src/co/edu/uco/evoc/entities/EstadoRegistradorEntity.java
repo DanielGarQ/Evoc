@@ -25,6 +25,18 @@ public class EstadoRegistradorEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  EstadoRegistradorEntity createWithIdentificador(final UUID identificador) {
+		return new EstadoRegistradorEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoRegistradorEntity createWithNombre(final String nombre) {
+		return new EstadoRegistradorEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoRegistradorEntity createWithDescripcion(final String descripcion) {
+		return new EstadoRegistradorEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static EstadoRegistradorEntity getdefaultObject() {
 		return DEFAULT_OBJECT;
 	}

@@ -26,6 +26,18 @@ public final class TipoCandidatoEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  TipoCandidatoEntity createWithIdentificador(final UUID identificador) {
+		return new TipoCandidatoEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoCandidatoEntity createWithNombre(final String nombre) {
+		return new TipoCandidatoEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoCandidatoEntity createWithDescripcion(final String descripcion) {
+		return new TipoCandidatoEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static final TipoCandidatoEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

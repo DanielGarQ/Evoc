@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.business.domain;
 
-import java.util.Date;
 import java.util.UUID;
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 
@@ -8,7 +7,7 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 	
 	private static final VotanteRegistradoDomain DEFAULT_OBJECT = new VotanteRegistradoDomain();
 	private MesaVotacionDomain mesaVotacion;
-	private Date fechaExpedicionIdentificacion;
+	private String fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
 	private CartonesPorMesaDomain cartonVotacion;
 	
@@ -22,7 +21,7 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 	}
 
 	public VotanteRegistradoDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
-			String nombre, String apellido, MesaVotacionDomain mesaVotacion, Date fechaExpedicionIdentificacion,
+			String nombre, String apellido, MesaVotacionDomain mesaVotacion, String fechaExpedicionIdentificacion,
 			boolean validacionDactilar, CartonesPorMesaDomain cartonVotacion) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
@@ -41,10 +40,10 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 	private final void setMesaVotacion(final MesaVotacionDomain mesaVotacion) {
 		this.mesaVotacion = UtilObject.getDefault(mesaVotacion, MesaVotacionDomain.getDefaultObject());
 	}
-	public final Date getFechaExpedicionIdentificacion() {
+	public final String getFechaExpedicionIdentificacion() {
 		return fechaExpedicionIdentificacion;
 	}
-	private final void setFechaExpedicionIdentificacion(final Date fechaExpedicionIdentificacion) {
+	private final void setFechaExpedicionIdentificacion(final String fechaExpedicionIdentificacion) {
 		this.fechaExpedicionIdentificacion = fechaExpedicionIdentificacion;
 	}
 	public final boolean isValidacionDactilar() {

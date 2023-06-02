@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.dto;
 
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
@@ -13,8 +12,8 @@ public final class EleccionDTO {
 	private String nombre;
 	private TipoEleccionDTO tipoEleccion;
 	private ZonaDTO zona;
-	private Date fechaInicial;
-	private Date fechaFinal;
+	private String fechaInicial;
+	private String fechaFinal;
 	private RegistradorDTO registrador;
 	private EstadoEleccionDTO estadoEleccion;
 	
@@ -30,8 +29,8 @@ public final class EleccionDTO {
 		setEstadoEleccion(EstadoEleccionDTO.create());
 	}
 	
-	public EleccionDTO(final UUID identificador, final String nombre, final TipoEleccionDTO tipoEleccion, final ZonaDTO zona, final Date fechaInicial,
-			final Date fechaFinal, final RegistradorDTO registrador, final EstadoEleccionDTO estadoELeccion) {
+	public EleccionDTO(final UUID identificador, final String nombre, final TipoEleccionDTO tipoEleccion, final ZonaDTO zona, final String fechaInicial,
+			final String fechaFinal, final RegistradorDTO registrador, final EstadoEleccionDTO estadoELeccion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -75,17 +74,17 @@ public final class EleccionDTO {
 		this.zona = UtilObject.getDefault(zona, ZonaDTO.create());
 		return this;
 	}
-	public final Date getFechaInicial() {
+	public final String getFechaInicial() {
 		return fechaInicial;
 	}
-	public final EleccionDTO setFechaInicial(final Date fechaInicial) {
+	public final EleccionDTO setFechaInicial(final String fechaInicial) {
 		this.fechaInicial = fechaInicial;
 		return this;
 	}
-	public final Date getFechaFinal() {
+	public final String getFechaFinal() {
 		return fechaFinal;
 	}
-	public final EleccionDTO setFechaFinal(final Date fechaFinal) {
+	public final EleccionDTO setFechaFinal(final String fechaFinal) {
 		this.fechaFinal = fechaFinal;
 		return this;
 	}

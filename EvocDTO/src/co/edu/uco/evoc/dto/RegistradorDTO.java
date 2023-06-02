@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.dto;
 
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
@@ -11,8 +10,8 @@ public final class RegistradorDTO extends PersonaDTO {
 	private RegistraduriaDTO registraduria;
 	private String telefono;
 	private String correo;
-	private Date fechaInicialCargo;
-	private Date fechaFinalCargo;
+	private String fechaInicialCargo;
+	private String fechaFinalCargo;
 	private EstadoRegistradorDTO estadoRegistrador;
 	
 	public RegistradorDTO() {
@@ -28,7 +27,7 @@ public final class RegistradorDTO extends PersonaDTO {
 	
 	public RegistradorDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
 			final String nombre, final String apellido,final TipoRegistradorDTO tipoRegistrador,final RegistraduriaDTO registraduria, String telefono,
-			final String correo,final Date fechaInicialCargo,final Date fechaFinalCargo,final EstadoRegistradorDTO estadoRegistrador) {
+			final String correo,final String fechaInicialCargo,final String fechaFinalCargo,final EstadoRegistradorDTO estadoRegistrador) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setTipoRegistrador(tipoRegistrador);
 		setRegistraduria(registraduria);
@@ -71,17 +70,17 @@ public final class RegistradorDTO extends PersonaDTO {
 		this.correo = correo;
 		return this;
 	}
-	public final Date getFechaInicialCargo() {
+	public final String getFechaInicialCargo() {
 		return fechaInicialCargo;
 	}
-	public final RegistradorDTO setFechaInicialCargo(final Date fechaInicialCargo) {
+	public final RegistradorDTO setFechaInicialCargo(final String fechaInicialCargo) {
 		this.fechaInicialCargo = fechaInicialCargo;
 		return  this;
 	}
-	public final Date getFechaFinalCargo() {
+	public final String getFechaFinalCargo() {
 		return fechaFinalCargo;
 	}
-	public final RegistradorDTO setFechaFinalCargo(final Date fechaFinalCargo) {
+	public final RegistradorDTO setFechaFinalCargo(final String fechaFinalCargo) {
 		this.fechaFinalCargo = fechaFinalCargo;
 		return this;
 	}

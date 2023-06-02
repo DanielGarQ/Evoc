@@ -32,6 +32,27 @@ public class PersonaEntity {
 		setNombre(nombre);
 		setApellido(apellido);
 	}
+	
+	public static final PersonaEntity createWithIdentificador(final UUID identificador) {
+		return new PersonaEntity(identificador, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final PersonaEntity createWithTipoIdentificacion(final TipoIdentificacionEntity tipoidentificacion) {
+		return new PersonaEntity(UtilUUID.DEFAULT_UUID, tipoidentificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final PersonaEntity createWithIdentificacion(final String identificacion) {
+		return new PersonaEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), identificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final PersonaEntity createWithNombre(final String nombre) {
+		return new PersonaEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), nombre, UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final PersonaEntity createWithApellido(final String apellido) {
+		return new PersonaEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), apellido);
+	}
+	
 	public UUID getIdentificador() {
 		return identificador;
 	}

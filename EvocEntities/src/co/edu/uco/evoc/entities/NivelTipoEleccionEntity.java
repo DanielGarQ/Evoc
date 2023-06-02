@@ -26,6 +26,18 @@ public final class NivelTipoEleccionEntity{
 		setDescripcion(descripcion);
 	}
 	
+	public static final  NivelTipoEleccionEntity createWithIdentificador(final UUID identificador) {
+		return new NivelTipoEleccionEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  NivelTipoEleccionEntity createWithNombre(final String nombre) {
+		return new NivelTipoEleccionEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  NivelTipoEleccionEntity createWithDescripcion(final String descripcion) {
+		return new NivelTipoEleccionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static NivelTipoEleccionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

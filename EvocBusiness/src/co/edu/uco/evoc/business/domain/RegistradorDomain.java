@@ -1,6 +1,5 @@
 package co.edu.uco.evoc.business.domain;
 
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
@@ -12,8 +11,8 @@ public class RegistradorDomain extends PersonaDomain {
 	private RegistraduriaDomain registraduria;
 	private String telefono;
 	private String correo;
-	private Date fechaInicialCargo;
-	private Date fechaFinalCargo;
+	private String fechaInicialCargo;
+	private String fechaFinalCargo;
 	private EstadoRegistradorDomain estadoRegistrador;
 	
 	private RegistradorDomain() {
@@ -29,7 +28,7 @@ public class RegistradorDomain extends PersonaDomain {
 	
 	public RegistradorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
 			String nombre, String apellido,TipoRegistradorDomain tipoRegistrador, RegistraduriaDomain registraduria, String telefono,
-			String correo, Date fechaInicialCargo, Date fechaFinalCargo, EstadoRegistradorDomain estadoRegistrador) {
+			String correo, String fechaInicialCargo, String fechaFinalCargo, EstadoRegistradorDomain estadoRegistrador) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setTipoRegistrador(tipoRegistrador);
 		setRegistraduria(registraduria);
@@ -68,16 +67,16 @@ public class RegistradorDomain extends PersonaDomain {
 	private final void setCorreo(final String correo) {
 		this.correo = correo;
 	}
-	public final Date getFechaInicialCargo() {
+	public final String getFechaInicialCargo() {
 		return fechaInicialCargo;
 	}
-	private final void setFechaInicialCargo(final Date fechaInicialCargo) {
+	private final void setFechaInicialCargo(final String fechaInicialCargo) {
 		this.fechaInicialCargo = fechaInicialCargo;
 	}
-	public final Date getFechaFinalCargo() {
+	public final String getFechaFinalCargo() {
 		return fechaFinalCargo;
 	}
-	private final void setFechaFinalCargo(final Date fechaFinalCargo) {
+	private final void setFechaFinalCargo(final String fechaFinalCargo) {
 		this.fechaFinalCargo = fechaFinalCargo;
 	}
 	public final EstadoRegistradorDomain getEstadoRegistrador() {

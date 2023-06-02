@@ -1,6 +1,6 @@
 
-s	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(÷ø‘é8ïÿÚ×û0H¨RMAJORZ
+s	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(÷ø‘é8ïÿÚ×û0HöRMAJORZ
 CODE_SMELL
 u
-java:S1854>"BRemove this useless assignment to local variable "cartonVotacion".(ú´Î8Ûß¨Ñ‡1H©RMAJORZ
+java:S1854R"BRemove this useless assignment to local variable "cartonVotacion".(ú´Î8Ûß¨Ñ‡1HõRMAJORZ
 CODE_SMELL

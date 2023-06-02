@@ -27,6 +27,18 @@ public class TipoEleccionEntity {
 		setNivelTipoEleccion(nivelTipoEleccion);
 	}
 	
+	public static final  TipoEleccionEntity createWithIdentificador(final UUID identificador) {
+		return new TipoEleccionEntity(identificador, UtilText.getUtilText().getDefaultValue(), NivelTipoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  TipoEleccionEntity createWithNombre(final String nombre) {
+		return new TipoEleccionEntity(UtilUUID.DEFAULT_UUID, nombre,NivelTipoEleccionEntity.getDefaultObject());
+	}
+	
+	public static final  TipoEleccionEntity createWithNivelTipoEleccion(final NivelTipoEleccionEntity nivelTipoEleccion) {
+		return new TipoEleccionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), nivelTipoEleccion);
+	}
+	
 	public static TipoEleccionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

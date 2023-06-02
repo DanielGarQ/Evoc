@@ -33,6 +33,26 @@ public class LocacionEntity {
 		setZona(zona);
 	}
 	
+	public static final  LocacionEntity createWithIdentificador(final UUID identificador) {
+		return new LocacionEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), ZonaEntity.getDefaultobject());
+	}
+	
+	public static final  LocacionEntity createWithDireccion(final String direccion) {
+		return new LocacionEntity(UtilUUID.DEFAULT_UUID, direccion,UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), ZonaEntity.getDefaultobject());
+	}
+	
+	public static final  LocacionEntity createWithDescripcion(final String descripcion) {
+		return new LocacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion, UtilText.getUtilText().getDefaultValue(), ZonaEntity.getDefaultobject());
+	}
+	
+	public static final  LocacionEntity createWithPotencialElectoral(final String potencialElectoral) {
+		return new LocacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), potencialElectoral, ZonaEntity.getDefaultobject());
+	}
+	
+	public static final  LocacionEntity createWithZona(final ZonaEntity zona) {
+		return new LocacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), zona);
+	}
+	
 	public static LocacionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

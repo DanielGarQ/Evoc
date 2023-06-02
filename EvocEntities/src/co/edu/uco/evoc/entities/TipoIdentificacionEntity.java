@@ -26,6 +26,18 @@ public class TipoIdentificacionEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  TipoIdentificacionEntity createWithIdentificador(final UUID identificador) {
+		return new TipoIdentificacionEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoIdentificacionEntity createWithNombre(final String nombre) {
+		return new TipoIdentificacionEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoIdentificacionEntity createWithDescripcion(final String descripcion) {
+		return new TipoIdentificacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static final TipoIdentificacionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

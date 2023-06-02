@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
 import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
+import co.edu.uco.evoc.crosscutting.utils.UtilValidacion;
 
 public final class CartonesPorMesaEntity {
 	
@@ -31,6 +32,22 @@ public final class CartonesPorMesaEntity {
 		setCartonVotacion(cartonVotacion);
 		setVotante(votante);
 		setMarcacion(marcacion);
+	}
+	
+	public static final  CartonesPorMesaEntity createWithIdentificador(final UUID identificador) {
+		return new CartonesPorMesaEntity(identificador, MesaVotacionEntity.getDefaultObject(), CartonVotacionEntity.getDefaultObject(), VotanteRegistradoEntity.getDefaultObject(), UtilValidacion.DEFAULT_VALIDATION);
+	}
+	
+	public static final  CartonesPorMesaEntity createWithMesaVotacion(final MesaVotacionEntity mesavotacion) {
+		return new CartonesPorMesaEntity(UtilUUID.DEFAULT_UUID, MesaVotacionEntity.getDefaultObject(), CartonVotacionEntity.getDefaultObject(), VotanteRegistradoEntity.getDefaultObject(), UtilValidacion.DEFAULT_VALIDATION);
+	}
+	
+	public static final  CartonesPorMesaEntity createWithCartonVotacion(final CartonVotacionEntity cartonVotacion) {
+		return new CartonesPorMesaEntity(UtilUUID.DEFAULT_UUID, MesaVotacionEntity.getDefaultObject(), cartonVotacion, VotanteRegistradoEntity.getDefaultObject(), UtilValidacion.DEFAULT_VALIDATION);
+	}
+	
+	public static final  CartonesPorMesaEntity createWithVotanteRegistrado(final VotanteRegistradoEntity votanteRegistrado) {
+		return new CartonesPorMesaEntity(UtilUUID.DEFAULT_UUID, MesaVotacionEntity.getDefaultObject(), CartonVotacionEntity.getDefaultObject(), votanteRegistrado, UtilValidacion.DEFAULT_VALIDATION);
 	}
 	
 	public static CartonesPorMesaEntity getDefaultObject() {

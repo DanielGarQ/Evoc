@@ -26,6 +26,18 @@ public class PartidoEntity {
 		setSede(sede);
 	}
 	
+	public static final  PartidoEntity createWithIdentificador(final UUID identificador) {
+		return new PartidoEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  PartidoEntity createWithNombre(final String nombre) {
+		return new PartidoEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  PartidoEntity createWithSede(final String sede) {
+		return new PartidoEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), sede);
+	}
+	
 	public static PartidoEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

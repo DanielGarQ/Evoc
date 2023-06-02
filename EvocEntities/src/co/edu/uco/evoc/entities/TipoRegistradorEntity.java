@@ -26,6 +26,18 @@ public class TipoRegistradorEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  TipoRegistradorEntity createWithIdentificador(final UUID identificador) {
+		return new TipoRegistradorEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoRegistradorEntity createWithNombre(final String nombre) {
+		return new TipoRegistradorEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  TipoRegistradorEntity createWithDescripcion(final String descripcion) {
+		return new TipoRegistradorEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static TipoRegistradorEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

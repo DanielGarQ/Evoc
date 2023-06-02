@@ -26,6 +26,18 @@ public class EstadoEleccionEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  EstadoEleccionEntity createWithIdentificador(final UUID identificador) {
+		return new EstadoEleccionEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoEleccionEntity createWithNombre(final String nombre) {
+		return new EstadoEleccionEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoEleccionEntity createWithDescripcion(final String descripcion) {
+		return new EstadoEleccionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static EstadoEleccionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

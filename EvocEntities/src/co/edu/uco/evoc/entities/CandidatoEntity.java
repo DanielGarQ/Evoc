@@ -3,6 +3,8 @@ package co.edu.uco.evoc.entities;
 import java.util.UUID;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
 public class CandidatoEntity extends PersonaEntity{
 	
@@ -23,6 +25,15 @@ public class CandidatoEntity extends PersonaEntity{
 		setPartido(partido);
 		
 	}
+	
+	public static final  CandidatoEntity createWithTipoCandidato(final TipoCandidatoEntity tipoCandidato) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), tipoCandidato, PartidoEntity.getDefaultObject());
+	}
+	
+	public static final  CandidatoEntity createWithPartido(final PartidoEntity partido) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), TipoCandidatoEntity.getDefaultObject(), partido);
+	}
+	
 	
 	public static CandidatoEntity getDefaultObject() {
 		return DEFAULT_OBJECT;

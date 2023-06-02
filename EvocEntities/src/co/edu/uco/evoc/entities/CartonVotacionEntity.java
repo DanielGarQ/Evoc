@@ -26,6 +26,18 @@ public final class CartonVotacionEntity {
 		setEleccion(eleccion);
 	}
 	
+	public static final  CartonVotacionEntity createWithIdentificador(final UUID identificador) {
+		return new CartonVotacionEntity(identificador, CandidatoEntity.getDefaultObject(), EleccionEntity.getDefaultObject());
+	}
+	
+	public static final  CartonVotacionEntity createWithCandidatos(final CandidatoEntity candidatos) {
+		return new CartonVotacionEntity(UtilUUID.DEFAULT_UUID, candidatos, EleccionEntity.getDefaultObject());
+	}
+	
+	public static final  CartonVotacionEntity createWithEleccion(final EleccionEntity eleccion) {
+		return new CartonVotacionEntity(UtilUUID.DEFAULT_UUID, CandidatoEntity.getDefaultObject(), eleccion);
+	}
+	
 	public static CartonVotacionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

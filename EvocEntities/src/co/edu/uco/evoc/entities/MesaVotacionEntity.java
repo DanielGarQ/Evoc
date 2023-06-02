@@ -34,6 +34,26 @@ public class MesaVotacionEntity {
 		setEstadoMesaVotacionCalculado(estadoMesaVotacionCalculado);
 	}
 	
+	public static final MesaVotacionEntity createWithIdentificador(final UUID identificador) {
+		return new MesaVotacionEntity(identificador, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), LocacionEntity.getDefaultObject(), EstadoMesaVotacionCalculadoEntity.getDefaultObject());
+	}
+	
+	public static final MesaVotacionEntity createWithNumeroMesa(final String numeroMesa) {
+		return new MesaVotacionEntity(UtilUUID.DEFAULT_UUID, numeroMesa, UtilText.getUtilText().getDefaultValue(), LocacionEntity.getDefaultObject(), EstadoMesaVotacionCalculadoEntity.getDefaultObject());
+	}
+	
+	public static final MesaVotacionEntity createWithPotencialElectoral(final String potencialElectoral) {
+		return new MesaVotacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), potencialElectoral, LocacionEntity.getDefaultObject(), EstadoMesaVotacionCalculadoEntity.getDefaultObject());
+	}
+	
+	public static final MesaVotacionEntity createWithLocacion(final LocacionEntity locacion) {
+		return new MesaVotacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), locacion, EstadoMesaVotacionCalculadoEntity.getDefaultObject());
+	}
+	
+	public static final MesaVotacionEntity createWithEstadoMesaVotacionCalculado(final EstadoMesaVotacionCalculadoEntity estadoMesaVotacionCalculado) {
+		return new MesaVotacionEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),LocacionEntity.getDefaultObject() , estadoMesaVotacionCalculado);
+	}
+	
 	public static MesaVotacionEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}

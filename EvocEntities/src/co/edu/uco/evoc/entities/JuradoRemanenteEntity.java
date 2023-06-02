@@ -2,7 +2,11 @@ package co.edu.uco.evoc.entities;
 
 import java.util.UUID;
 
+import co.edu.uco.evoc.crosscutting.utils.UtilCorreo;
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.crosscutting.utils.UtilTelefono;
+import co.edu.uco.evoc.crosscutting.utils.UtilText;
+import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
 
 public final class JuradoRemanenteEntity extends PersonaEntity {
@@ -25,6 +29,18 @@ public final class JuradoRemanenteEntity extends PersonaEntity {
 		setTelefono(telefono);
 		setCorreo(correo);
 		setMesaVotacion(mesaVotacion);
+	}
+	
+	public static final  JuradoRemanenteEntity createWithTelefono(final String telefono) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),telefono, UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static final  JuradoRemanenteEntity createWithCorreo(final String correo) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO, correo, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static final  JuradoRemanenteEntity createWithmesaVotacion(final MesaVotacionEntity mesaVotacion) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, mesaVotacion);
 	}
 	
 	public static JuradoRemanenteEntity getDefaultObject() {

@@ -26,6 +26,18 @@ public class EstadoMesaVotacionCalculadoEntity {
 		setDescripcion(descripcion);
 	}
 	
+	public static final  EstadoMesaVotacionCalculadoEntity createWithIdentificador(final UUID identificador) {
+		return new EstadoMesaVotacionCalculadoEntity(identificador, UtilText.getUtilText().getDefaultValue(),UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoMesaVotacionCalculadoEntity createWithNombre(final String nombre) {
+		return new EstadoMesaVotacionCalculadoEntity(UtilUUID.DEFAULT_UUID, nombre,UtilText.getUtilText().getDefaultValue());
+	}
+	
+	public static final  EstadoMesaVotacionCalculadoEntity createWithDescripcion(final String descripcion) {
+		return new EstadoMesaVotacionCalculadoEntity(UtilUUID.DEFAULT_UUID, UtilText.getUtilText().getDefaultValue(), descripcion);
+	}
+	
 	public static EstadoMesaVotacionCalculadoEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
