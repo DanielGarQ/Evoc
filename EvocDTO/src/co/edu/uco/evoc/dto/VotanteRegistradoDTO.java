@@ -10,21 +10,24 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 	private MesaVotacionDTO mesaVotacion;
 	private Date fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
+	private CartonesPorMesaDTO cartonVotacion;
 	
 	public VotanteRegistradoDTO() {
 		super();
 		setMesaVotacion(MesaVotacionDTO.create());
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(CartonesPorMesaDTO.create());
 	}
 	
 	public VotanteRegistradoDTO(final UUID identificador, final TipoIdentificacionDTO tipoIdentificacion, final String identificacion,
 			final String nombre, final String apellido, final MesaVotacionDTO mesaVotacion, final Date fechaExpedicionIdentificacion,
-			final boolean validacionDactilar) {
+			final boolean validacionDactilar, CartonesPorMesaDTO cartonVotacion) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(cartonVotacion);
 	}
 	
 	public static VotanteRegistradoDTO create() {
@@ -50,6 +53,15 @@ public final class VotanteRegistradoDTO extends PersonaDTO{
 	}
 	public final VotanteRegistradoDTO setValidacionDactilar(final boolean validacionDactilar) {
 		this.validacionDactilar = validacionDactilar;
+		return this;
+	}
+
+	public CartonesPorMesaDTO getCartonVotacion() {
+		return cartonVotacion;
+	}
+
+	public VotanteRegistradoDTO setCartonVotacion(CartonesPorMesaDTO cartonVotacion) {
+		this.cartonVotacion = UtilObject.getDefault(cartonVotacion, CartonesPorMesaDTO.create());
 		return this;
 	}
 

@@ -21,22 +21,22 @@ public final class VotanteRegistradoAssembler implements Assembler<VotanteRegist
 	
 	@Override
 	public VotanteRegistradoDTO toDtoFromDomain(VotanteRegistradoDomain domain) {
-		return VotanteRegistradoDTO.create().setMesaVotacion(MesaVotacionAssembler.getinstance().toDtoFromDomain(domain.getMesaVotacion())).setFechaExpedicionIdentificacion(domain.getFechaExpedicionIdentificacion()).setValidacionDactilar(domain.isValidacionDactilar());
+		return VotanteRegistradoDTO.create().setMesaVotacion(MesaVotacionAssembler.getinstance().toDtoFromDomain(domain.getMesaVotacion())).setFechaExpedicionIdentificacion(domain.getFechaExpedicionIdentificacion()).setValidacionDactilar(domain.isValidacionDactilar()).setCartonVotacion(CartonesPorMesaAssembler.getinstance().toDtoFromDomain(domain.getCartonVotacion()));
 	}
 
 	@Override
 	public VotanteRegistradoDomain toDomainFromDto(VotanteRegistradoDTO dto) {
-		return new VotanteRegistradoDomain(dto.getIdentificador(),TipoIdentificacionAssembler.getinstance().toDomainFromDto(dto.getTipoIdentificacion()), dto.getIdentificacion(), dto.getNombre(),dto.getApellido(),MesaVotacionAssembler.getinstance().toDomainFromDto(dto.getMesaVotacion()), dto.getFechaExpedicionIdentificacion(), dto.isValidacionDactilar());
+		return new VotanteRegistradoDomain(dto.getIdentificador(),TipoIdentificacionAssembler.getinstance().toDomainFromDto(dto.getTipoIdentificacion()), dto.getIdentificacion(), dto.getNombre(),dto.getApellido(),MesaVotacionAssembler.getinstance().toDomainFromDto(dto.getMesaVotacion()), dto.getFechaExpedicionIdentificacion(), dto.isValidacionDactilar(),CartonesPorMesaAssembler.getinstance().toDomainFromDto(dto.getCartonVotacion()));
 	}
 
 	@Override
 	public VotanteRegistradoEntity toEntityFromDomain(VotanteRegistradoDomain domain) {
-		return new VotanteRegistradoEntity(domain.getIdentificador(),TipoIdentificacionAssembler.getinstance().toEntityFromDomain(domain.getTipoIdentificacion()), domain.getIdentificacion() ,domain.getNombre(), domain.getApellido(),MesaVotacionAssembler.getinstance().toEntityFromDomain(domain.getMesaVotacion()), domain.getFechaExpedicionIdentificacion(), domain.isValidacionDactilar());
+		return new VotanteRegistradoEntity(domain.getIdentificador(),TipoIdentificacionAssembler.getinstance().toEntityFromDomain(domain.getTipoIdentificacion()), domain.getIdentificacion() ,domain.getNombre(), domain.getApellido(),MesaVotacionAssembler.getinstance().toEntityFromDomain(domain.getMesaVotacion()), domain.getFechaExpedicionIdentificacion(), domain.isValidacionDactilar(),CartonesPorMesaAssembler.getinstance().toEntityFromDomain(domain.getCartonVotacion()));
 	}
 
 	@Override
 	public VotanteRegistradoDomain toDomainFromEntity(VotanteRegistradoEntity entity) {
-		return new VotanteRegistradoDomain(entity.getIdentificador(), TipoIdentificacionAssembler.getinstance().toDomainFromEntity(entity.getTipoIdentificacion()), entity.getIdentificacion(),entity.getNombre(),entity.getApellido(),MesaVotacionAssembler.getinstance().toDomainFromEntity(entity.getMesaVotacion()), entity.getFechaExpedicionIdentificacion(), entity.isValidacionDactilar());
+		return new VotanteRegistradoDomain(entity.getIdentificador(), TipoIdentificacionAssembler.getinstance().toDomainFromEntity(entity.getTipoIdentificacion()), entity.getIdentificacion(),entity.getNombre(),entity.getApellido(),MesaVotacionAssembler.getinstance().toDomainFromEntity(entity.getMesaVotacion()), entity.getFechaExpedicionIdentificacion(), entity.isValidacionDactilar(), CartonesPorMesaAssembler.getinstance().toDomainFromEntity(entity.getCartonVotacion()));
 	}
 	
 	public final List<VotanteRegistradoDomain> toDomainListFromEntityList(final List<VotanteRegistradoEntity> entityList) {

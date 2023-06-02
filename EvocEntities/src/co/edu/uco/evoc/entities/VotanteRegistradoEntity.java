@@ -10,21 +10,25 @@ public class VotanteRegistradoEntity extends PersonaEntity{
 	private MesaVotacionEntity mesaVotacion;
 	private Date fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
+	private CartonesPorMesaEntity cartonVotacion;
 	
 	private VotanteRegistradoEntity() {
 		super();
 		setMesaVotacion(MesaVotacionEntity.getDefaultObject());
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(CartonesPorMesaEntity.getDefaultObject());
+		
 	}
 
 	public VotanteRegistradoEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion, String identificacion,
 			String nombre, String apellido, MesaVotacionEntity mesaVotacion, Date fechaExpedicionIdentificacion,
-			boolean validacionDactilar) {
+			boolean validacionDactilar, CartonesPorMesaEntity cartonVotacion) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(cartonVotacion);
 	}
 	
 	public static VotanteRegistradoEntity getDefaultObject() {
@@ -48,6 +52,14 @@ public class VotanteRegistradoEntity extends PersonaEntity{
 	}
 	private final void setValidacionDactilar(final boolean validacionDactilar) {
 		this.validacionDactilar = validacionDactilar;
+	}
+
+	public CartonesPorMesaEntity getCartonVotacion() {
+		return cartonVotacion;
+	}
+
+	public void setCartonVotacion(CartonesPorMesaEntity cartonVotacion) {
+		cartonVotacion = UtilObject.getDefault(cartonVotacion, CartonesPorMesaEntity.getDefaultObject());
 	}
 
 }

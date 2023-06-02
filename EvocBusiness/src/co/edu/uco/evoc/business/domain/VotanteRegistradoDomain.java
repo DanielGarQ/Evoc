@@ -10,21 +10,25 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 	private MesaVotacionDomain mesaVotacion;
 	private Date fechaExpedicionIdentificacion;
 	private boolean validacionDactilar;
+	private CartonesPorMesaDomain cartonVotacion;
 	
 	private VotanteRegistradoDomain() {
 		super();
 		setMesaVotacion(MesaVotacionDomain.getDefaultObject());
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(CartonesPorMesaDomain.getDefaultObject());
+		
 	}
 
 	public VotanteRegistradoDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String identificacion,
 			String nombre, String apellido, MesaVotacionDomain mesaVotacion, Date fechaExpedicionIdentificacion,
-			boolean validacionDactilar) {
+			boolean validacionDactilar, CartonesPorMesaDomain cartonVotacion) {
 		super(identificador, tipoIdentificacion, identificacion, nombre, apellido);
 		setMesaVotacion(mesaVotacion);
 		setFechaExpedicionIdentificacion(fechaExpedicionIdentificacion);
 		setValidacionDactilar(validacionDactilar);
+		setCartonVotacion(cartonVotacion);
 	}
 	
 	public static VotanteRegistradoDomain getDefaultObject() {
@@ -48,6 +52,14 @@ public class VotanteRegistradoDomain extends PersonaDomain {
 	}
 	private final void setValidacionDactilar(final boolean validacionDactilar) {
 		this.validacionDactilar = validacionDactilar;
+	}
+
+	public CartonesPorMesaDomain getCartonVotacion() {
+		return cartonVotacion;
+	}
+
+	public void setCartonVotacion(CartonesPorMesaDomain cartonVotacion) {
+		this.cartonVotacion = UtilObject.getDefault(cartonVotacion, CartonesPorMesaDomain.getDefaultObject());
 	}
 
 }

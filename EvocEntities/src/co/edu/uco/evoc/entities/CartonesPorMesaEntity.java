@@ -7,11 +7,21 @@ import co.edu.uco.evoc.crosscutting.utils.UtilUUID;
 
 public final class CartonesPorMesaEntity {
 	
+	private static final CartonesPorMesaEntity DEFAULT_OBJECT = new CartonesPorMesaEntity();
 	private UUID identificador;
 	private MesaVotacionEntity mesaVotacion;
 	private CartonVotacionEntity cartonVotacion;
 	private VotanteRegistradoEntity votante;
 	private boolean marcacion;
+	
+	public CartonesPorMesaEntity() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setMesaVotacion(MesaVotacionEntity.getDefaultObject());
+		setCartonVotacion(CartonVotacionEntity.getDefaultObject());
+		setVotante(VotanteRegistradoEntity.getDefaultObject());
+		setMarcacion(marcacion);
+	}
 	
 	public CartonesPorMesaEntity(final UUID identificador, final MesaVotacionEntity mesaVotacion, final CartonVotacionEntity cartonVotacion,
 			final VotanteRegistradoEntity votante, final boolean marcacion) {
@@ -21,6 +31,10 @@ public final class CartonesPorMesaEntity {
 		setCartonVotacion(cartonVotacion);
 		setVotante(votante);
 		setMarcacion(marcacion);
+	}
+	
+	public static CartonesPorMesaEntity getDefaultObject() {
+		return DEFAULT_OBJECT;
 	}
 	
 	public final UUID getIdentificador() {

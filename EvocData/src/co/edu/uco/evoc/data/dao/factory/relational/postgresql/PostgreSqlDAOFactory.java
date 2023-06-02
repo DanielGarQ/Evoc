@@ -9,9 +9,9 @@ import co.edu.uco.evoc.data.dao.factory.DAOFactory;
 
 public final class PostgreSqlDAOFactory extends DAOFactory{
 	
-	private static final String URL_BASE_DE_DATOS = "jdbc:postgresql://localhost:5432/nombrebasedatos";
+	private static final String URL_BASE_DE_DATOS = "jdbc:postgresql://localhost:5432/bd_evoc";
 	private static final String USUARIO_BASE_DE_DATOS = "postgresql";
-	private static final String CLAVE_BASE_DE_DATOS = "contraseñabd";
+	private static final String CLAVE_BASE_DE_DATOS = "DANIEL22001058";
 	private Connection conexion;
 
 	
