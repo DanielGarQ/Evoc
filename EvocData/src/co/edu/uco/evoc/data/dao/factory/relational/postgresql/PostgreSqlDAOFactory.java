@@ -5,7 +5,21 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import co.edu.uco.evoc.crosscutting.utils.UtilObject;
+import co.edu.uco.evoc.data.dao.NivelTipoEleccionDAO;
+import co.edu.uco.evoc.data.dao.PartidoDAO;
+import co.edu.uco.evoc.data.dao.RegistraduriaDAO;
+import co.edu.uco.evoc.data.dao.TipoCandidatoDAO;
+import co.edu.uco.evoc.data.dao.TipoIdentificacionDAO;
+import co.edu.uco.evoc.data.dao.TipoRegistradorDAO;
+import co.edu.uco.evoc.data.dao.ZonaDAO;
 import co.edu.uco.evoc.data.dao.factory.DAOFactory;
+import co.edu.uco.evoc.data.dao.relational.postgresql.NivelTipoEleccionPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.PartidoPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.RegistraduriaPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.TipoCandidatoPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.TipoIdentificacionPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.TipoRegistradorPostgreSqlDAO;
+import co.edu.uco.evoc.data.dao.relational.postgresql.ZonaPostgreSqlDAO;
 
 public final class PostgreSqlDAOFactory extends DAOFactory{
 	
@@ -99,5 +113,40 @@ public final class PostgreSqlDAOFactory extends DAOFactory{
 		}
 		
 	}
+	
+	@Override
+	public ZonaDAO getZonaDAO() {
+		return new ZonaPostgreSqlDAO(conexion);
+	}
+	
+	@Override
+	public TipoRegistradorDAO getTipoRegistradorDAO() {
+		return new TipoRegistradorPostgreSqlDAO(conexion);
+	}
+
+	@Override
+	public TipoIdentificacionDAO getTipoIdentificacionDAO() {
+		return new TipoIdentificacionPostgreSqlDAO(conexion);
+	}
+	
+	@Override
+	public TipoCandidatoDAO getTipoCandidatoDAO() {
+		return new TipoCandidatoPostgreSqlDAO(conexion);
+	}
+	
+	@Override
+	public PartidoDAO getPartidoDAO() {
+		return new PartidoPostgreSqlDAO(conexion);
+	}
+	
+	@Override
+	public RegistraduriaDAO getRegistraduriaDAO() {
+		return new RegistraduriaPostgreSqlDAO(conexion);
+	}
+	
+	public NivelTipoEleccionDAO getNivelTipoEleccionDAO() {
+		return new NivelTipoEleccionPostgreSqlDAO(conexion);
+	}
+
 
 }

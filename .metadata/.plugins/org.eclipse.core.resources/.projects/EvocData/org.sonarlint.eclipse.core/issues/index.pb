@@ -57,3 +57,15 @@ c
 3src/co/edu/uco/evoc/data/dao/relational/SqlDAO.java,4\b\4b4e62afa70d2967557772f32cee58a48de3ee74
 y
 Isrc/co/edu/uco/evoc/data/dao/relational/postgresql/ZonaPostgreSqlDAO.java,4\6\461f46a248bc0826d6e3ff286c742bb9ec697823
+„
+Tsrc/co/edu/uco/evoc/data/dao/relational/postgresql/TipoRegistradorPostgreSqlDAO.java,d\a\da3257d1c15b9d702a89fa97bb999d290ca504f0
+‡
+Wsrc/co/edu/uco/evoc/data/dao/relational/postgresql/TipoIdentificacionPostgreSqlDAO.java,5\d\5d445fe3f43d6178ec6a8c1275096370bfec389a
+‚
+Rsrc/co/edu/uco/evoc/data/dao/relational/postgresql/TipoCandidatoPostgreSqlDAO.java,a\3\a3e52670cafd51f785797b880c3fddd82de027d0
+|
+Lsrc/co/edu/uco/evoc/data/dao/relational/postgresql/PartidoPostgreSqlDAO.java,f\d\fd8f56a0f6abed01c85fd2cceeb8659ca2c02da3
+‚
+Rsrc/co/edu/uco/evoc/data/dao/relational/postgresql/RegistraduriaPostgreSqlDAO.java,8\b\8b3fbf3224f949dd61e7095c3470502c236fc8a3
+†
+Vsrc/co/edu/uco/evoc/data/dao/relational/postgresql/NivelTipoEleccionPostgreSqlDAO.java,b\4\b43e91e34efd924277800c60f406579de0f6d4a5
