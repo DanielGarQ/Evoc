@@ -1,5 +1,0 @@
-package co.edu.uco.evoc.business.facade;
-
-public interface EstadoMesaVotacionCalculadoFacade {
-
-}

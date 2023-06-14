@@ -26,6 +26,26 @@ public class CandidatoEntity extends PersonaEntity{
 		
 	}
 	
+	public static CandidatoEntity createWithIdentificador( UUID identificador) {
+		return new CandidatoEntity(identificador, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),TipoCandidatoEntity.getDefaultObject() ,PartidoEntity.getDefaultObject());
+	}
+	
+	public static CandidatoEntity createWithTipoIdentificacion( TipoIdentificacionEntity tipoidentificacion) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, tipoidentificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), TipoCandidatoEntity.getDefaultObject() ,PartidoEntity.getDefaultObject());
+	}
+	
+	public static CandidatoEntity createWithIdentificacion( String identificacion) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), identificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), TipoCandidatoEntity.getDefaultObject() ,PartidoEntity.getDefaultObject());
+	}
+	
+	public static CandidatoEntity createWithNombre( String nombre) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), nombre, UtilText.getUtilText().getDefaultValue(), TipoCandidatoEntity.getDefaultObject() ,PartidoEntity.getDefaultObject());
+	}
+	
+	public static CandidatoEntity createWithApellido( String apellido) {
+		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), apellido, TipoCandidatoEntity.getDefaultObject() ,PartidoEntity.getDefaultObject());
+	}
+	
 	public static final  CandidatoEntity createWithTipoCandidato(final TipoCandidatoEntity tipoCandidato) {
 		return new CandidatoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), tipoCandidato, PartidoEntity.getDefaultObject());
 	}

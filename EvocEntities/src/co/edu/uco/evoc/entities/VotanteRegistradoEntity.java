@@ -35,6 +35,26 @@ public class VotanteRegistradoEntity extends PersonaEntity{
 		setCartonVotacion(cartonVotacion);
 	}
 	
+	public static VotanteRegistradoEntity createWithIdentificador( UUID identificador) {
+		return new VotanteRegistradoEntity(identificador, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),MesaVotacionEntity.getDefaultObject() ,UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
+	}
+	
+	public static VotanteRegistradoEntity createWithTipoIdentificacion( TipoIdentificacionEntity tipoidentificacion) {
+		return new VotanteRegistradoEntity(UtilUUID.DEFAULT_UUID, tipoidentificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), MesaVotacionEntity.getDefaultObject() ,UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
+	}
+	
+	public static VotanteRegistradoEntity createWithIdentificacion( String identificacion) {
+		return new VotanteRegistradoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), identificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), MesaVotacionEntity.getDefaultObject() ,UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
+	}
+	
+	public static VotanteRegistradoEntity createWithNombre( String nombre) {
+		return new VotanteRegistradoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), nombre, UtilText.getUtilText().getDefaultValue(), MesaVotacionEntity.getDefaultObject() ,UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
+	}
+	
+	public static VotanteRegistradoEntity createWithApellido( String apellido) {
+		return new VotanteRegistradoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), apellido, MesaVotacionEntity.getDefaultObject() ,UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
+	}
+	
 	public static final  VotanteRegistradoEntity createWithMesaVotacion(final MesaVotacionEntity mesaVotacion) {
 		return new VotanteRegistradoEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), mesaVotacion, UtilFecha.DEFAULT_FECHA, UtilValidacion.DEFAULT_VALIDATION ,CartonesPorMesaEntity.getDefaultObject());
 	}

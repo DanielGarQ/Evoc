@@ -93,7 +93,7 @@ public final class TipoRegistradorPostgreSqlDAO extends SqlDAO<TipoRegistradorEn
 	@Override
 	public final void update(final TipoRegistradorEntity entity) {
 		
-		var sqlStatement = "UPDATE Zona SET nombre= ?, Descripcion= ? WHERE identificador=?";
+		var sqlStatement = "UPDATE TipoRegistrador SET nombre= ?, Descripcion= ? WHERE identificador=?";
 		
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
@@ -123,7 +123,7 @@ public final class TipoRegistradorPostgreSqlDAO extends SqlDAO<TipoRegistradorEn
 
 	@Override
 	public final void delete(final TipoRegistradorEntity entity) {
-		var sqlStatement = "DELETE FROM Zona WHERE identificador=?";
+		var sqlStatement = "DELETE FROM TipoRegistrador WHERE identificador=?";
 		
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			

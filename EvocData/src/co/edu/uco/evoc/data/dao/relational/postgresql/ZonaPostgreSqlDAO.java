@@ -26,7 +26,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 	@Override
 	public final void create(final ZonaEntity entity) {
 		
-		var sqlStatement = "INSERT INTO Zona(codigo, nombre, descripcion) VALUES (?, ?, ?)";
+		var sqlStatement = "INSERT INTO Zona(identificacor, nombre, descripcion, potencialElectoral) VALUES (?, ?, ?)";
 				
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement)){
 			
@@ -189,7 +189,7 @@ public final class ZonaPostgreSqlDAO extends SqlDAO<ZonaEntity> implements ZonaD
 			
 			if (!UtilText.getUtilText().isEmpty(entity.getPotencialElectoral())) {
 				parameters.add(entity.getPotencialElectoral());
-				where.append(setWhere ? "WHERE " : "AND").append("nombre=? ");
+				where.append(setWhere ? "WHERE " : "AND").append("potencialElectoral=? ");
 				setWhere = false;
 			}
 			

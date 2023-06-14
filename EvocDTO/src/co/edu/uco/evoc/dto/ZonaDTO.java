@@ -17,7 +17,7 @@ public final class ZonaDTO {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
-		setZonaPadre(ZonaDTO.create());
+		setZonaPadre(UtilObject.getDefault(zonaPadre, ZonaDTO.create()));
 		setPotencialElectoral(UtilText.getUtilText().getDefaultValue());
 	}
 	

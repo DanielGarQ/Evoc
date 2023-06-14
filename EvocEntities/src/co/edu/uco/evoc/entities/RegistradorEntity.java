@@ -44,6 +44,26 @@ public class RegistradorEntity extends PersonaEntity {
 		setEstadoRegistrador(estadoRegistrador);
 	}
 	
+	public static final RegistradorEntity createWithIdentificador(final UUID identificador) {
+		return new RegistradorEntity(identificador, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),TipoRegistradorEntity.getDefaultObject() ,RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
+	}
+	
+	public static final RegistradorEntity createWithTipoIdentificacion(final TipoIdentificacionEntity tipoidentificacion) {
+		return new RegistradorEntity(UtilUUID.DEFAULT_UUID, tipoidentificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), TipoRegistradorEntity.getDefaultObject() ,RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
+	}
+	
+	public static final RegistradorEntity createWithIdentificacion(final String identificacion) {
+		return new RegistradorEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), identificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), TipoRegistradorEntity.getDefaultObject() ,RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
+	}
+	
+	public static final RegistradorEntity createWithNombre(final String nombre) {
+		return new RegistradorEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), nombre, UtilText.getUtilText().getDefaultValue(), TipoRegistradorEntity.getDefaultObject() ,RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
+	}
+	
+	public static final RegistradorEntity createWithApellido(final String apellido) {
+		return new RegistradorEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), apellido, TipoRegistradorEntity.getDefaultObject() ,RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
+	}
+	
 	public static final  RegistradorEntity createWithTipoRegistrador(final TipoRegistradorEntity tipoRegistrador) {
 		return new RegistradorEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),tipoRegistrador, RegistraduriaEntity.getDefaultObject(),UtilTelefono.DEFAULT_TELEFONO, UtilCorreo.DEFAULT_CORREO, UtilFecha.DEFAULT_FECHA, UtilFecha.DEFAULT_FECHA, EstadoRegistradorEntity.getdefaultObject());
 	}

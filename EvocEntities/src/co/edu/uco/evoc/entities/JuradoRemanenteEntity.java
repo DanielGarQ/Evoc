@@ -31,6 +31,26 @@ public final class JuradoRemanenteEntity extends PersonaEntity {
 		setMesaVotacion(mesaVotacion);
 	}
 	
+	public static JuradoRemanenteEntity createWithIdentificador( UUID identificador) {
+		return new JuradoRemanenteEntity(identificador, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO ,UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static JuradoRemanenteEntity createWithTipoIdentificacion( TipoIdentificacionEntity tipoidentificacion) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, tipoidentificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO ,UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static JuradoRemanenteEntity createWithIdentificacion( String identificacion) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), identificacion, UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO ,UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static JuradoRemanenteEntity createWithNombre( String nombre) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), nombre, UtilText.getUtilText().getDefaultValue(),UtilTelefono.DEFAULT_TELEFONO ,UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
+	public static JuradoRemanenteEntity createWithApellido( String apellido) {
+		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), apellido,UtilTelefono.DEFAULT_TELEFONO ,UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
+	}
+	
 	public static final  JuradoRemanenteEntity createWithTelefono(final String telefono) {
 		return new JuradoRemanenteEntity(UtilUUID.DEFAULT_UUID, TipoIdentificacionEntity.getDefaultObject(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(), UtilText.getUtilText().getDefaultValue(),telefono, UtilCorreo.DEFAULT_CORREO, MesaVotacionEntity.getDefaultObject());
 	}
